@@ -1,0 +1,53 @@
+
+**** 11/18/16 12:24:30 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Dark Current"  [ H:\Uni Stuff\Year 3\Project\Pspice\detector-pspicefiles\schematic1\dark current.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Dark Current.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of H:\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DETECTOR
+V_V1         0 N00153 5Vdc
+V_V2         N00157 0 5Vdc
+C_C1         N00198 N00210  100p  TC=0,0 
+R_R1         N00198 N00210  5G TC=0,0 
+I_I1         N00198 N00345 DC 10pAdc  
+C_C2         N00153 0  100p  TC=0,0 
+C_C3         0 N00157  100p  TC=0,0 
+X_U2         N00210 N00882 N00882 N00705 N00820 LM358 
+C_C4         N00705 0  100p  TC=0,0 
+V_V3         0 N00705 5Vdc
+C_C5         0 N00820  100p  TC=0,0 
+V_V4         N00820 0 5Vdc
+
+**** RESUMING "Dark Current.cir" ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N00345.
+
+ERROR(ORPSIM-15142): Node N00345 is floating
+
