@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (16.6.0.d001)
+STATUS:  
+STATUS: Translator started at Friday, November 18, 2016 13:29:16
+STATUS: C:\Cadence\SPB_16.6\tools\Capture\sch2cap -f "H:\Uni Stuff\Year 3\Project\Pspice\Models\AD549\ad549.cir" -o "H:\Uni Stuff\Year 3\Project\Pspice\Models\AD549\ad549.olb" -i H:\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\SPB_16.6\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'H:\Uni Stuff\Year 3\Project\Pspice\Models\AD549\ad549.olb'.
+STATUS: Translator stopped at Friday, November 18, 2016 13:29:16
+STATUS: 0 Error messages, 0 Warning messages

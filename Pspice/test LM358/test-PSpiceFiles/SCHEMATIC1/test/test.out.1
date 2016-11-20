@@ -1,0 +1,44 @@
+
+**** 11/18/16 13:47:45 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ H:\Uni Stuff\Year 3\Project\Pspice\test\test-pspicefiles\schematic1\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of H:\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TEST
+V_V1         M_UN0001 0 0.5Vdc
+V_V2         N001590 0 0Vdc
+V_V3         0 N001771 0Vdc
+R_R1         N00290 0  1k TC=0,0 
+X_U1         N00122 0 N001590 N001771 N00290 LM358 
+
+**** RESUMING test.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N00122.
+
