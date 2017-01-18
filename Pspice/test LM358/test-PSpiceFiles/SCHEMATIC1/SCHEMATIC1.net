@@ -1,5 +1,0 @@
-* source TEST
-V_V2         N001590 0 5Vdc
-V_V3         0 N001771 5Vdc
-X_U1         N00705 N00068 N001590 N001771 N00068 LM358 
-V_V4         N00705 0 1Vdc

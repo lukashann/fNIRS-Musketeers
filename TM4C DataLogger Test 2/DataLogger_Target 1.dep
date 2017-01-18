@@ -1,0 +1,25 @@
+Dependencies for Project 'DataLogger', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.c)(0x587F6494)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil_v4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (PLL.h)(0x587F53AF)
+I (UART0.h)(0x56C47256)
+I (tm4c123gh6pm.h)(0x51D45492)
+I (ADCT0ATrigger.h)(0x587F63E7)
+F (.\startup.s)(0x565CF9B8)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\TI\TM4C123--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\tm4c123gh6pm.h)(0x51D45492)()
+F (.\FIFO.h)(0x56C46D2D)()
+F (.\PLL.h)(0x587F53AF)()
+F (.\UART0.h)(0x56C47256)()
+F (.\PLL.c)(0x52308F04)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\pll.o --omf_browse .\pll.crf --depend .\pll.d)
+I (PLL.h)(0x587F53AF)
+F (.\UART0.c)(0x56C47265)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\uart0.o --omf_browse .\uart0.crf --depend .\uart0.d)
+I (C:\Keil_v4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (UART0.h)(0x56C47256)
+I (tm4c123gh6pm.h)(0x51D45492)
+I (FIFO.h)(0x56C46D2D)
+F (.\ADCT0ATrigger.c)(0x587F6E53)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\adct0atrigger.o --omf_browse .\adct0atrigger.crf --depend .\adct0atrigger.d)
+I (C:\Keil_v4\ARM\ARMCC\include\stdint.h)(0x51C827C4)
+I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C827C4)
+I (tm4c123gh6pm.h)(0x51D45492)
+I (UART0.h)(0x56C47256)
+F (.\ADCT0ATrigger.h)(0x587F63E7)()
