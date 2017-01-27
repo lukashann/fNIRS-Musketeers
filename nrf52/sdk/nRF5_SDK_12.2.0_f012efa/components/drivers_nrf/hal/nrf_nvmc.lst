@@ -1,0 +1,1951 @@
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   3              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   4              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   5              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   6              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   7              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+   8              		.eabi_attribute 30, 4	@ Tag_ABI_optimization_goals
+   9              		.eabi_attribute 34, 1	@ Tag_CPU_unaligned_access
+  10              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  11              		.file	"nrf_nvmc.c"
+  12              	@ GNU C11 (GNU Tools for ARM Embedded Processors) version 6.2.1 20161205 (release) [ARM/embedded-6-
+  13              	@	compiled by GNU C version 5.4.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl ve
+  14              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  15              	@ options passed:  -I . -I include/ -I cfg/
+  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
+  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
+  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
+  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
+  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
+  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
+  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  23              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd
+  24              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal
+  25              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common
+  26              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util
+  27              	@ -imultilib thumb/v7e-m
+  28              	@ -iprefix /Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf52
+  29              	@ -isysroot /Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf5
+  30              	@ -MD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.d
+  31              	@ -MF .depnrf_nvmc.o.d -MP
+  32              	@ -MQ ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+  33              	@ -D__USES_INITFINI__ -D NRF52
+  34              	@ ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c
+  35              	@ -mcpu=cortex-m4 -mthumb
+  36              	@ -auxbase-strip ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+  37              	@ -gdwarf-2 -Os -Wall -Wstrict-prototypes -fomit-frame-pointer
+  38              	@ -fverbose-asm
+  39              	@ options enabled:  -faggressive-loop-optimizations -falign-jumps
+  40              	@ -falign-labels -falign-loops -fauto-inc-dec -fbranch-count-reg
+  41              	@ -fcaller-saves -fchkp-check-incomplete-type -fchkp-check-read
+  42              	@ -fchkp-check-write -fchkp-instrument-calls -fchkp-narrow-bounds
+  43              	@ -fchkp-optimize -fchkp-store-bounds -fchkp-use-static-bounds
+  44              	@ -fchkp-use-static-const-bounds -fchkp-use-wrappers
+  45              	@ -fcombine-stack-adjustments -fcommon -fcompare-elim -fcprop-registers
+  46              	@ -fcrossjumping -fcse-follow-jumps -fdefer-pop
+  47              	@ -fdelete-null-pointer-checks -fdevirtualize -fdevirtualize-speculatively
+  48              	@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  49              	@ -fexpensive-optimizations -fforward-propagate -ffunction-cse -fgcse
+  50              	@ -fgcse-lm -fgnu-runtime -fgnu-unique -fguess-branch-probability
+  51              	@ -fhoist-adjacent-loads -fident -fif-conversion -fif-conversion2
+  52              	@ -findirect-inlining -finline -finline-atomics -finline-functions
+  53              	@ -finline-functions-called-once -finline-small-functions -fipa-cp
+  54              	@ -fipa-cp-alignment -fipa-icf -fipa-icf-functions -fipa-icf-variables
+  55              	@ -fipa-profile -fipa-pure-const -fipa-ra -fipa-reference -fipa-sra
+  56              	@ -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
+  57              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 2
+
+
+  58              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
+  59              	@ -fmath-errno -fmerge-constants -fmerge-debug-strings
+  60              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
+  61              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
+  62              	@ -freg-struct-return -freorder-blocks -freorder-functions
+  63              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+  64              	@ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  65              	@ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
+  66              	@ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  67              	@ -fschedule-insns2 -fsection-anchors -fsemantic-interposition
+  68              	@ -fshow-column -fsigned-zeros -fsplit-ivs-in-unroller -fsplit-wide-types
+  69              	@ -fssa-backprop -fssa-phiopt -fstdarg-opt -fstrict-aliasing
+  70              	@ -fstrict-overflow -fstrict-volatile-bitfields -fsync-libcalls
+  71              	@ -fthread-jumps -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp
+  72              	@ -ftree-builtin-call-dce -ftree-ccp -ftree-ch -ftree-coalesce-vars
+  73              	@ -ftree-copy-prop -ftree-cselim -ftree-dce -ftree-dominator-opts
+  74              	@ -ftree-dse -ftree-forwprop -ftree-fre -ftree-loop-if-convert
+  75              	@ -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  76              	@ -ftree-parallelize-loops= -ftree-phiprop -ftree-pre -ftree-pta
+  77              	@ -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr -ftree-sra
+  78              	@ -ftree-switch-conversion -ftree-tail-merge -ftree-ter -ftree-vrp
+  79              	@ -funit-at-a-time -fvar-tracking -fvar-tracking-assignments -fverbose-asm
+  80              	@ -fzero-initialized-in-bss -masm-syntax-unified -mlittle-endian
+  81              	@ -mpic-data-is-text-relative -msched-prolog -mthumb -munaligned-access
+  82              	@ -mvectorize-with-neon-quad
+  83              	
+  84              		.text
+  85              	.Ltext0:
+  86              		.cfi_sections	.debug_frame
+  87              		.align	1
+  88              		.global	nrf_nvmc_page_erase
+  89              		.syntax unified
+  90              		.thumb
+  91              		.thumb_func
+  92              		.fpu softvfp
+  93              		.type	nrf_nvmc_page_erase, %function
+  94              	nrf_nvmc_page_erase:
+  95              	.LFB124:
+  96              		.file 1 "../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c"
+   1:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** /* Copyright (c) 2012 Nordic Semiconductor. All Rights Reserved.
+   2:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** *
+   3:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** * The information contained herein is property of Nordic Semiconductor ASA.
+   4:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** * Terms and conditions of usage are described in detail in NORDIC
+   5:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** * SEMICONDUCTOR STANDARD SOFTWARE LICENSE AGREEMENT.
+   6:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** *
+   7:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** * Licensees are granted free, non-transferable use of the information. NO
+   8:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** * WARRANTY of ANY KIND is provided. This heading must NOT be removed from
+   9:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** * the file.
+  10:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** *
+  11:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** * $LastChangedRevision: 17685 $
+  12:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** */
+  13:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  14:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** /**
+  15:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****  *@file
+  16:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****  *@brief NMVC driver implementation
+  17:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****  */
+  18:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 3
+
+
+  19:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** #include <stdbool.h>
+  20:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** #include "nrf.h"
+  21:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** #include "nrf_nvmc.h"
+  22:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  23:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  24:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** void nrf_nvmc_page_erase(uint32_t address)
+  25:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** {
+  97              		.loc 1 25 0
+  98              		.cfi_startproc
+  99              		@ args = 0, pretend = 0, frame = 0
+ 100              		@ frame_needed = 0, uses_anonymous_args = 0
+ 101              		@ link register save eliminated.
+ 102              	.LVL0:
+  26:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     // Enable erase.
+  27:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = NVMC_CONFIG_WEN_Een;
+ 103              		.loc 1 27 0
+ 104 0000 0B4B     		ldr	r3, .L11	@ tmp114,
+ 105 0002 0222     		movs	r2, #2	@ tmp115,
+ 106 0004 C3F80425 		str	r2, [r3, #1284]	@ tmp115, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+ 107              	.L2:
+  28:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 108              		.loc 1 28 0 discriminator 1
+ 109 0008 D3F80024 		ldr	r2, [r3, #1024]	@ _3, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 110 000c 002A     		cmp	r2, #0	@ _3
+ 111 000e FBD0     		beq	.L2	@
+  29:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  30:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  31:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  32:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     // Erase the page
+  33:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->ERASEPAGE = address;
+ 112              		.loc 1 33 0
+ 113 0010 C3F80805 		str	r0, [r3, #1288]	@ address, MEM[(struct NRF_NVMC_Type *)1073864704B].D.6100.ERASEPAGE
+ 114              	.L3:
+  34:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 115              		.loc 1 34 0 discriminator 1
+ 116 0014 D3F80024 		ldr	r2, [r3, #1024]	@ _6, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 117 0018 002A     		cmp	r2, #0	@ _6
+ 118 001a FBD0     		beq	.L3	@
+  35:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  36:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  37:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  38:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = NVMC_CONFIG_WEN_Ren;
+ 119              		.loc 1 38 0
+ 120 001c 0022     		movs	r2, #0	@ tmp120,
+ 121 001e C3F80425 		str	r2, [r3, #1284]	@ tmp120, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+  39:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 122              		.loc 1 39 0
+ 123 0022 034A     		ldr	r2, .L11	@ tmp121,
+ 124              	.L4:
+ 125              		.loc 1 39 0 is_stmt 0 discriminator 1
+ 126 0024 D2F80034 		ldr	r3, [r2, #1024]	@ _8, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 127 0028 002B     		cmp	r3, #0	@ _8
+ 128 002a FBD0     		beq	.L4	@
+  40:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  41:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  42:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** }
+ 129              		.loc 1 42 0 is_stmt 1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 4
+
+
+ 130 002c 7047     		bx	lr	@
+ 131              	.L12:
+ 132 002e 00BF     		.align	2
+ 133              	.L11:
+ 134 0030 00E00140 		.word	1073864704
+ 135              		.cfi_endproc
+ 136              	.LFE124:
+ 137              		.size	nrf_nvmc_page_erase, .-nrf_nvmc_page_erase
+ 138              		.align	1
+ 139              		.global	nrf_nvmc_write_byte
+ 140              		.syntax unified
+ 141              		.thumb
+ 142              		.thumb_func
+ 143              		.fpu softvfp
+ 144              		.type	nrf_nvmc_write_byte, %function
+ 145              	nrf_nvmc_write_byte:
+ 146              	.LFB125:
+  43:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  44:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  45:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** void nrf_nvmc_write_byte(uint32_t address, uint8_t value)
+  46:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** {
+ 147              		.loc 1 46 0
+ 148              		.cfi_startproc
+ 149              		@ args = 0, pretend = 0, frame = 0
+ 150              		@ frame_needed = 0, uses_anonymous_args = 0
+ 151              	.LVL1:
+ 152 0034 10B5     		push	{r4, lr}	@
+ 153              	.LCFI0:
+ 154              		.cfi_def_cfa_offset 8
+ 155              		.cfi_offset 4, -8
+ 156              		.cfi_offset 14, -4
+  47:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     uint32_t byte_shift = address & (uint32_t)0x03;
+  48:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     uint32_t address32 = address & ~byte_shift; // Address to the word this byte is in.
+ 157              		.loc 1 48 0
+ 158 0036 20F00304 		bic	r4, r0, #3	@ address32.0_4, address,
+ 159              	.LVL2:
+  49:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     uint32_t value32 = (*(uint32_t*)address32 & ~((uint32_t)0xFF << (byte_shift << (uint32_t)3)));
+ 160              		.loc 1 49 0
+ 161 003a C000     		lsls	r0, r0, #3	@ tmp125, address,
+ 162              	.LVL3:
+ 163 003c 00F01800 		and	r0, r0, #24	@ _7, tmp125,
+ 164 0040 FF23     		movs	r3, #255	@ tmp127,
+ 165 0042 03FA00F2 		lsl	r2, r3, r0	@ tmp126, tmp127, _7
+ 166 0046 2368     		ldr	r3, [r4]	@ *address32.0_4, *address32.0_4
+  50:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     value32 = value32 + ((uint32_t)value << (byte_shift << 3));
+ 167              		.loc 1 50 0
+ 168 0048 01FA00F0 		lsl	r0, r1, r0	@ tmp130, value, _7
+  49:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     uint32_t value32 = (*(uint32_t*)address32 & ~((uint32_t)0xFF << (byte_shift << (uint32_t)3)));
+ 169              		.loc 1 49 0
+ 170 004c 23EA0203 		bic	r3, r3, r2	@ value32, *address32.0_4, tmp126
+ 171              	.LVL4:
+ 172              		.loc 1 50 0
+ 173 0050 1844     		add	r0, r0, r3	@ value32, value32
+ 174              	.LVL5:
+  51:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  52:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     // Enable write.
+  53:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = (NVMC_CONFIG_WEN_Wen << NVMC_CONFIG_WEN_Pos);
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 5
+
+
+ 175              		.loc 1 53 0
+ 176 0052 084B     		ldr	r3, .L20	@ tmp131,
+ 177 0054 0122     		movs	r2, #1	@ tmp132,
+ 178 0056 C3F80425 		str	r2, [r3, #1284]	@ tmp132, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+ 179              	.L14:
+  54:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 180              		.loc 1 54 0 discriminator 1
+ 181 005a D3F80024 		ldr	r2, [r3, #1024]	@ _16, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 182 005e 002A     		cmp	r2, #0	@ _16
+ 183 0060 FBD0     		beq	.L14	@
+  55:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  56:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  57:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  58:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     *(uint32_t*)address32 = value32;
+ 184              		.loc 1 58 0
+ 185 0062 2060     		str	r0, [r4]	@ value32, *address32.0_4
+ 186              	.L15:
+  59:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 187              		.loc 1 59 0 discriminator 1
+ 188 0064 D3F80024 		ldr	r2, [r3, #1024]	@ _18, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 189 0068 002A     		cmp	r2, #0	@ _18
+ 190 006a FBD0     		beq	.L15	@
+  60:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  61:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  62:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  63:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = (NVMC_CONFIG_WEN_Ren << NVMC_CONFIG_WEN_Pos);
+ 191              		.loc 1 63 0
+ 192 006c 0022     		movs	r2, #0	@ tmp136,
+ 193 006e C3F80425 		str	r2, [r3, #1284]	@ tmp136, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+ 194 0072 10BD     		pop	{r4, pc}	@
+ 195              	.LVL6:
+ 196              	.L21:
+ 197              		.align	2
+ 198              	.L20:
+ 199 0074 00E00140 		.word	1073864704
+ 200              		.cfi_endproc
+ 201              	.LFE125:
+ 202              		.size	nrf_nvmc_write_byte, .-nrf_nvmc_write_byte
+ 203              		.align	1
+ 204              		.global	nrf_nvmc_write_word
+ 205              		.syntax unified
+ 206              		.thumb
+ 207              		.thumb_func
+ 208              		.fpu softvfp
+ 209              		.type	nrf_nvmc_write_word, %function
+ 210              	nrf_nvmc_write_word:
+ 211              	.LFB126:
+  64:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  65:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  66:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** }
+  67:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  68:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** void nrf_nvmc_write_word(uint32_t address, uint32_t value)
+  69:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** {
+ 212              		.loc 1 69 0
+ 213              		.cfi_startproc
+ 214              		@ args = 0, pretend = 0, frame = 0
+ 215              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 6
+
+
+ 216              		@ link register save eliminated.
+ 217              	.LVL7:
+  70:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     // Enable write.
+  71:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = NVMC_CONFIG_WEN_Wen;
+ 218              		.loc 1 71 0
+ 219 0078 0A4B     		ldr	r3, .L32	@ tmp116,
+ 220 007a 0122     		movs	r2, #1	@ tmp117,
+ 221 007c C3F80425 		str	r2, [r3, #1284]	@ tmp117, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+ 222              	.L23:
+  72:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy){
+ 223              		.loc 1 72 0 discriminator 1
+ 224 0080 D3F80024 		ldr	r2, [r3, #1024]	@ _3, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 225 0084 002A     		cmp	r2, #0	@ _3
+ 226 0086 FBD0     		beq	.L23	@
+  73:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  74:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  75:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     *(uint32_t*)address = value;
+ 227              		.loc 1 75 0
+ 228 0088 0160     		str	r1, [r0]	@ value, *address.1_5
+ 229              	.L24:
+  76:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy){
+ 230              		.loc 1 76 0 discriminator 1
+ 231 008a D3F80024 		ldr	r2, [r3, #1024]	@ _8, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 232 008e 002A     		cmp	r2, #0	@ _8
+ 233 0090 FBD0     		beq	.L24	@
+  77:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  78:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  79:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = NVMC_CONFIG_WEN_Ren;
+ 234              		.loc 1 79 0
+ 235 0092 0022     		movs	r2, #0	@ tmp121,
+ 236 0094 C3F80425 		str	r2, [r3, #1284]	@ tmp121, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+  80:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 237              		.loc 1 80 0
+ 238 0098 024A     		ldr	r2, .L32	@ tmp122,
+ 239              	.L25:
+ 240              		.loc 1 80 0 is_stmt 0 discriminator 1
+ 241 009a D2F80034 		ldr	r3, [r2, #1024]	@ _10, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 242 009e 002B     		cmp	r3, #0	@ _10
+ 243 00a0 FBD0     		beq	.L25	@
+  81:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  82:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  83:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** }
+ 244              		.loc 1 83 0 is_stmt 1
+ 245 00a2 7047     		bx	lr	@
+ 246              	.L33:
+ 247              		.align	2
+ 248              	.L32:
+ 249 00a4 00E00140 		.word	1073864704
+ 250              		.cfi_endproc
+ 251              	.LFE126:
+ 252              		.size	nrf_nvmc_write_word, .-nrf_nvmc_write_word
+ 253              		.align	1
+ 254              		.global	nrf_nvmc_write_bytes
+ 255              		.syntax unified
+ 256              		.thumb
+ 257              		.thumb_func
+ 258              		.fpu softvfp
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 7
+
+
+ 259              		.type	nrf_nvmc_write_bytes, %function
+ 260              	nrf_nvmc_write_bytes:
+ 261              	.LFB127:
+  84:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  85:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** void nrf_nvmc_write_bytes(uint32_t address, const uint8_t * src, uint32_t num_bytes)
+  86:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** {
+ 262              		.loc 1 86 0
+ 263              		.cfi_startproc
+ 264              		@ args = 0, pretend = 0, frame = 0
+ 265              		@ frame_needed = 0, uses_anonymous_args = 0
+ 266              	.LVL8:
+ 267 00a8 70B5     		push	{r4, r5, r6, lr}	@
+ 268              	.LCFI1:
+ 269              		.cfi_def_cfa_offset 16
+ 270              		.cfi_offset 4, -16
+ 271              		.cfi_offset 5, -12
+ 272              		.cfi_offset 6, -8
+ 273              		.cfi_offset 14, -4
+ 274 00aa 8D18     		adds	r5, r1, r2	@ _16, src, num_bytes
+  87:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     uint32_t i;
+  88:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     for (i=0;i<num_bytes;i++)
+ 275              		.loc 1 88 0
+ 276 00ac 0C46     		mov	r4, r1	@ ivtmp.22, src
+ 277 00ae 461A     		subs	r6, r0, r1	@ tmp152, address, ivtmp.22
+ 278              	.LVL9:
+ 279              	.L35:
+ 280              		.loc 1 88 0 is_stmt 0 discriminator 1
+ 281 00b0 AC42     		cmp	r4, r5	@ ivtmp.22, _16
+ 282 00b2 00D1     		bne	.L36	@,
+  89:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+  90:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****        nrf_nvmc_write_byte(address + i,src[i]);
+  91:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+  92:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** }
+ 283              		.loc 1 92 0 is_stmt 1
+ 284 00b4 70BD     		pop	{r4, r5, r6, pc}	@
+ 285              	.LVL10:
+ 286              	.L36:
+ 287 00b6 3019     		adds	r0, r6, r4	@ _20, tmp152, ivtmp.22
+  90:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+ 288              		.loc 1 90 0 discriminator 3
+ 289 00b8 14F8011B 		ldrb	r1, [r4], #1	@ zero_extendqisi2	@, MEM[base: _17, offset: 0B]
+ 290              	.LVL11:
+ 291 00bc FFF7FEFF 		bl	nrf_nvmc_write_byte	@
+ 292              	.LVL12:
+ 293 00c0 F6E7     		b	.L35	@
+ 294              		.cfi_endproc
+ 295              	.LFE127:
+ 296              		.size	nrf_nvmc_write_bytes, .-nrf_nvmc_write_bytes
+ 297              		.align	1
+ 298              		.global	nrf_nvmc_write_words
+ 299              		.syntax unified
+ 300              		.thumb
+ 301              		.thumb_func
+ 302              		.fpu softvfp
+ 303              		.type	nrf_nvmc_write_words, %function
+ 304              	nrf_nvmc_write_words:
+ 305              	.LFB128:
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 8
+
+
+  93:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  94:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** void nrf_nvmc_write_words(uint32_t address, const uint32_t * src, uint32_t num_words)
+  95:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** {
+ 306              		.loc 1 95 0
+ 307              		.cfi_startproc
+ 308              		@ args = 0, pretend = 0, frame = 0
+ 309              		@ frame_needed = 0, uses_anonymous_args = 0
+ 310              	.LVL13:
+  96:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     uint32_t i;
+  97:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+  98:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     // Enable write.
+  99:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = NVMC_CONFIG_WEN_Wen;
+ 311              		.loc 1 99 0
+ 312 00c2 104B     		ldr	r3, .L49	@ tmp153,
+  95:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     uint32_t i;
+ 313              		.loc 1 95 0
+ 314 00c4 10B5     		push	{r4, lr}	@
+ 315              	.LCFI2:
+ 316              		.cfi_def_cfa_offset 8
+ 317              		.cfi_offset 4, -8
+ 318              		.cfi_offset 14, -4
+ 319              		.loc 1 99 0
+ 320 00c6 0124     		movs	r4, #1	@ tmp154,
+ 321 00c8 C3F80445 		str	r4, [r3, #1284]	@ tmp154, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+ 322              	.L38:
+ 100:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 323              		.loc 1 100 0 discriminator 1
+ 324 00cc D3F80044 		ldr	r4, [r3, #1024]	@ _5, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 325 00d0 002C     		cmp	r4, #0	@ _5
+ 326 00d2 FBD0     		beq	.L38	@
+ 327 00d4 0B4B     		ldr	r3, .L49	@ tmp162,
+ 328 00d6 0439     		subs	r1, r1, #4	@ ivtmp.31, src,
+ 329              	.LVL14:
+ 330 00d8 00EB8202 		add	r2, r0, r2, lsl #2	@ _27, address, num_words,
+ 331              	.LVL15:
+ 332              	.L39:
+ 101:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+ 102:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+ 103:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+ 104:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     for (i=0;i<num_words;i++)
+ 333              		.loc 1 104 0 discriminator 1
+ 334 00dc 9042     		cmp	r0, r2	@ ivtmp.35, _27
+ 335 00de 07D1     		bne	.L41	@,
+ 105:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+ 106:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****         ((uint32_t*)address)[i] = src[i];
+ 107:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****         while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 108:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****         {
+ 109:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****         }
+ 110:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+ 111:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** 
+ 112:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     NRF_NVMC->CONFIG = NVMC_CONFIG_WEN_Ren;
+ 336              		.loc 1 112 0
+ 337 00e0 0022     		movs	r2, #0	@ tmp159,
+ 338 00e2 C3F80425 		str	r2, [r3, #1284]	@ tmp159, MEM[(struct NRF_NVMC_Type *)1073864704B].CONFIG
+ 339              	.L42:
+ 113:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 340              		.loc 1 113 0 discriminator 1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 9
+
+
+ 341 00e6 D3F80024 		ldr	r2, [r3, #1024]	@ _19, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 342 00ea 002A     		cmp	r2, #0	@ _19
+ 343 00ec FBD0     		beq	.L42	@
+ 114:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     {
+ 115:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****     }
+ 116:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c **** }
+ 344              		.loc 1 116 0
+ 345 00ee 10BD     		pop	{r4, pc}	@
+ 346              	.L41:
+ 106:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****         while (NRF_NVMC->READY == NVMC_READY_READY_Busy)
+ 347              		.loc 1 106 0
+ 348 00f0 51F8044F 		ldr	r4, [r1, #4]!	@ _14, MEM[base: _28, offset: 0B]
+ 349 00f4 40F8044B 		str	r4, [r0], #4	@ _14, MEM[base: 0B, index: ivtmp.35_23, offset: 0B]
+ 350              	.L40:
+ 107:../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.c ****         {
+ 351              		.loc 1 107 0 discriminator 1
+ 352 00f8 D3F80044 		ldr	r4, [r3, #1024]	@ _16, MEM[(struct NRF_NVMC_Type *)1073864704B].READY
+ 353 00fc 002C     		cmp	r4, #0	@ _16
+ 354 00fe FBD0     		beq	.L40	@
+ 355 0100 ECE7     		b	.L39	@
+ 356              	.L50:
+ 357 0102 00BF     		.align	2
+ 358              	.L49:
+ 359 0104 00E00140 		.word	1073864704
+ 360              		.cfi_endproc
+ 361              	.LFE128:
+ 362              		.size	nrf_nvmc_write_words, .-nrf_nvmc_write_words
+ 363              	.Letext0:
+ 364              		.file 2 "/Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf52/
+ 365              		.file 3 "/Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf52/
+ 366              		.file 4 "../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include/core_cm4.h"
+ 367              		.file 5 "../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.h"
+ 368              		.file 6 "../sdk/nRF5_SDK_12.2.0_f012efa/components/device/nrf52.h"
+ 369              		.section	.debug_info,"",%progbits
+ 370              	.Ldebug_info0:
+ 371 0000 BC030000 		.4byte	0x3bc
+ 372 0004 0200     		.2byte	0x2
+ 373 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 374 000a 04       		.byte	0x4
+ 375 000b 01       		.uleb128 0x1
+ 376 000c 39010000 		.4byte	.LASF44
+ 377 0010 0C       		.byte	0xc
+ 378 0011 E6000000 		.4byte	.LASF45
+ 379 0015 86000000 		.4byte	.LASF46
+ 380 0019 00000000 		.4byte	.Ltext0
+ 381 001d 08010000 		.4byte	.Letext0
+ 382 0021 00000000 		.4byte	.Ldebug_line0
+ 383 0025 02       		.uleb128 0x2
+ 384 0026 01       		.byte	0x1
+ 385 0027 06       		.byte	0x6
+ 386 0028 22030000 		.4byte	.LASF0
+ 387 002c 03       		.uleb128 0x3
+ 388 002d 00000000 		.4byte	.LASF4
+ 389 0031 02       		.byte	0x2
+ 390 0032 2B       		.byte	0x2b
+ 391 0033 37000000 		.4byte	0x37
+ 392 0037 02       		.uleb128 0x2
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 10
+
+
+ 393 0038 01       		.byte	0x1
+ 394 0039 08       		.byte	0x8
+ 395 003a 2B010000 		.4byte	.LASF1
+ 396 003e 02       		.uleb128 0x2
+ 397 003f 02       		.byte	0x2
+ 398 0040 05       		.byte	0x5
+ 399 0041 DE020000 		.4byte	.LASF2
+ 400 0045 02       		.uleb128 0x2
+ 401 0046 02       		.byte	0x2
+ 402 0047 07       		.byte	0x7
+ 403 0048 CF010000 		.4byte	.LASF3
+ 404 004c 03       		.uleb128 0x3
+ 405 004d 3D000000 		.4byte	.LASF5
+ 406 0051 02       		.byte	0x2
+ 407 0052 4D       		.byte	0x4d
+ 408 0053 57000000 		.4byte	0x57
+ 409 0057 02       		.uleb128 0x2
+ 410 0058 04       		.byte	0x4
+ 411 0059 05       		.byte	0x5
+ 412 005a 19030000 		.4byte	.LASF6
+ 413 005e 03       		.uleb128 0x3
+ 414 005f E2010000 		.4byte	.LASF7
+ 415 0063 02       		.byte	0x2
+ 416 0064 4F       		.byte	0x4f
+ 417 0065 69000000 		.4byte	0x69
+ 418 0069 02       		.uleb128 0x2
+ 419 006a 04       		.byte	0x4
+ 420 006b 07       		.byte	0x7
+ 421 006c BD010000 		.4byte	.LASF8
+ 422 0070 02       		.uleb128 0x2
+ 423 0071 08       		.byte	0x8
+ 424 0072 05       		.byte	0x5
+ 425 0073 97020000 		.4byte	.LASF9
+ 426 0077 02       		.uleb128 0x2
+ 427 0078 08       		.byte	0x8
+ 428 0079 07       		.byte	0x7
+ 429 007a 45020000 		.4byte	.LASF10
+ 430 007e 04       		.uleb128 0x4
+ 431 007f 04       		.byte	0x4
+ 432 0080 05       		.byte	0x5
+ 433 0081 696E7400 		.ascii	"int\000"
+ 434 0085 02       		.uleb128 0x2
+ 435 0086 04       		.byte	0x4
+ 436 0087 07       		.byte	0x7
+ 437 0088 47000000 		.4byte	.LASF11
+ 438 008c 03       		.uleb128 0x3
+ 439 008d 5C020000 		.4byte	.LASF12
+ 440 0091 03       		.byte	0x3
+ 441 0092 18       		.byte	0x18
+ 442 0093 2C000000 		.4byte	0x2c
+ 443 0097 05       		.uleb128 0x5
+ 444 0098 8C000000 		.4byte	0x8c
+ 445 009c 03       		.uleb128 0x3
+ 446 009d 7E020000 		.4byte	.LASF13
+ 447 00a1 03       		.byte	0x3
+ 448 00a2 2C       		.byte	0x2c
+ 449 00a3 4C000000 		.4byte	0x4c
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 11
+
+
+ 450 00a7 06       		.uleb128 0x6
+ 451 00a8 9C000000 		.4byte	0x9c
+ 452 00ac 03       		.uleb128 0x3
+ 453 00ad 10030000 		.4byte	.LASF14
+ 454 00b1 03       		.byte	0x3
+ 455 00b2 30       		.byte	0x30
+ 456 00b3 5E000000 		.4byte	0x5e
+ 457 00b7 06       		.uleb128 0x6
+ 458 00b8 AC000000 		.4byte	0xac
+ 459 00bc 05       		.uleb128 0x5
+ 460 00bd B7000000 		.4byte	0xb7
+ 461 00c1 05       		.uleb128 0x5
+ 462 00c2 AC000000 		.4byte	0xac
+ 463 00c6 02       		.uleb128 0x2
+ 464 00c7 04       		.byte	0x4
+ 465 00c8 07       		.byte	0x7
+ 466 00c9 86020000 		.4byte	.LASF15
+ 467 00cd 07       		.uleb128 0x7
+ 468 00ce 26020000 		.4byte	.LASF16
+ 469 00d2 04       		.byte	0x4
+ 470 00d3 4407     		.2byte	0x744
+ 471 00d5 A7000000 		.4byte	0xa7
+ 472 00d9 01       		.byte	0x1
+ 473 00da 01       		.byte	0x1
+ 474 00db 08       		.uleb128 0x8
+ 475 00dc BA020000 		.4byte	.LASF17
+ 476 00e0 05       		.byte	0x5
+ 477 00e1 29       		.byte	0x29
+ 478 00e2 AC000000 		.4byte	0xac
+ 479 00e6 01       		.byte	0x1
+ 480 00e7 01       		.byte	0x1
+ 481 00e8 09       		.uleb128 0x9
+ 482 00e9 BC000000 		.4byte	0xbc
+ 483 00ed F8000000 		.4byte	0xf8
+ 484 00f1 0A       		.uleb128 0xa
+ 485 00f2 C6000000 		.4byte	0xc6
+ 486 00f6 3F       		.byte	0x3f
+ 487 00f7 00       		.byte	0
+ 488 00f8 05       		.uleb128 0x5
+ 489 00f9 E8000000 		.4byte	0xe8
+ 490 00fd 06       		.uleb128 0x6
+ 491 00fe F8000000 		.4byte	0xf8
+ 492 0102 09       		.uleb128 0x9
+ 493 0103 BC000000 		.4byte	0xbc
+ 494 0107 12010000 		.4byte	0x112
+ 495 010b 0A       		.uleb128 0xa
+ 496 010c C6000000 		.4byte	0xc6
+ 497 0110 09       		.byte	0x9
+ 498 0111 00       		.byte	0
+ 499 0112 05       		.uleb128 0x5
+ 500 0113 02010000 		.4byte	0x102
+ 501 0117 06       		.uleb128 0x6
+ 502 0118 12010000 		.4byte	0x112
+ 503 011c 0B       		.uleb128 0xb
+ 504 011d 04       		.byte	0x4
+ 505 011e 06       		.byte	0x6
+ 506 011f E206     		.2byte	0x6e2
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 12
+
+
+ 507 0121 3E010000 		.4byte	0x13e
+ 508 0125 0C       		.uleb128 0xc
+ 509 0126 F2020000 		.4byte	.LASF18
+ 510 012a 06       		.byte	0x6
+ 511 012b E306     		.2byte	0x6e3
+ 512 012d B7000000 		.4byte	0xb7
+ 513 0131 0C       		.uleb128 0xc
+ 514 0132 F6010000 		.4byte	.LASF19
+ 515 0136 06       		.byte	0x6
+ 516 0137 E506     		.2byte	0x6e5
+ 517 0139 B7000000 		.4byte	0xb7
+ 518 013d 00       		.byte	0
+ 519 013e 0D       		.uleb128 0xd
+ 520 013f 5005     		.2byte	0x550
+ 521 0141 06       		.byte	0x6
+ 522 0142 DC06     		.2byte	0x6dc
+ 523 0144 11020000 		.4byte	0x211
+ 524 0148 0E       		.uleb128 0xe
+ 525 0149 5E000000 		.4byte	.LASF20
+ 526 014d 06       		.byte	0x6
+ 527 014e DD06     		.2byte	0x6dd
+ 528 0150 26020000 		.4byte	0x226
+ 529 0154 02       		.byte	0x2
+ 530 0155 23       		.byte	0x23
+ 531 0156 00       		.uleb128 0
+ 532 0157 0E       		.uleb128 0xe
+ 533 0158 78020000 		.4byte	.LASF21
+ 534 015c 06       		.byte	0x6
+ 535 015d DE06     		.2byte	0x6de
+ 536 015f BC000000 		.4byte	0xbc
+ 537 0163 03       		.byte	0x3
+ 538 0164 23       		.byte	0x23
+ 539 0165 8008     		.uleb128 0x400
+ 540 0167 0E       		.uleb128 0xe
+ 541 0168 68000000 		.4byte	.LASF22
+ 542 016c 06       		.byte	0x6
+ 543 016d DF06     		.2byte	0x6df
+ 544 016f FD000000 		.4byte	0xfd
+ 545 0173 03       		.byte	0x3
+ 546 0174 23       		.byte	0x23
+ 547 0175 8408     		.uleb128 0x404
+ 548 0177 0E       		.uleb128 0xe
+ 549 0178 1F020000 		.4byte	.LASF23
+ 550 017c 06       		.byte	0x6
+ 551 017d E006     		.2byte	0x6e0
+ 552 017f B7000000 		.4byte	0xb7
+ 553 0183 03       		.byte	0x3
+ 554 0184 23       		.byte	0x23
+ 555 0185 840A     		.uleb128 0x504
+ 556 0187 0F       		.uleb128 0xf
+ 557 0188 1C010000 		.4byte	0x11c
+ 558 018c 03       		.byte	0x3
+ 559 018d 23       		.byte	0x23
+ 560 018e 880A     		.uleb128 0x508
+ 561 0190 0E       		.uleb128 0xe
+ 562 0191 ED010000 		.4byte	.LASF24
+ 563 0195 06       		.byte	0x6
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 13
+
+
+ 564 0196 E706     		.2byte	0x6e7
+ 565 0198 B7000000 		.4byte	0xb7
+ 566 019c 03       		.byte	0x3
+ 567 019d 23       		.byte	0x23
+ 568 019e 8C0A     		.uleb128 0x50c
+ 569 01a0 0E       		.uleb128 0xe
+ 570 01a1 E8020000 		.4byte	.LASF25
+ 571 01a5 06       		.byte	0x6
+ 572 01a6 E806     		.2byte	0x6e8
+ 573 01a8 B7000000 		.4byte	0xb7
+ 574 01ac 03       		.byte	0x3
+ 575 01ad 23       		.byte	0x23
+ 576 01ae 900A     		.uleb128 0x510
+ 577 01b0 0E       		.uleb128 0xe
+ 578 01b1 6E020000 		.4byte	.LASF26
+ 579 01b5 06       		.byte	0x6
+ 580 01b6 EA06     		.2byte	0x6ea
+ 581 01b8 B7000000 		.4byte	0xb7
+ 582 01bc 03       		.byte	0x3
+ 583 01bd 23       		.byte	0x23
+ 584 01be 940A     		.uleb128 0x514
+ 585 01c0 0E       		.uleb128 0xe
+ 586 01c1 72000000 		.4byte	.LASF27
+ 587 01c5 06       		.byte	0x6
+ 588 01c6 EB06     		.2byte	0x6eb
+ 589 01c8 17010000 		.4byte	0x117
+ 590 01cc 03       		.byte	0x3
+ 591 01cd 23       		.byte	0x23
+ 592 01ce 980A     		.uleb128 0x518
+ 593 01d0 0E       		.uleb128 0xe
+ 594 01d1 64020000 		.4byte	.LASF28
+ 595 01d5 06       		.byte	0x6
+ 596 01d6 EC06     		.2byte	0x6ec
+ 597 01d8 B7000000 		.4byte	0xb7
+ 598 01dc 03       		.byte	0x3
+ 599 01dd 23       		.byte	0x23
+ 600 01de C00A     		.uleb128 0x540
+ 601 01e0 0E       		.uleb128 0xe
+ 602 01e1 7C000000 		.4byte	.LASF29
+ 603 01e5 06       		.byte	0x6
+ 604 01e6 ED06     		.2byte	0x6ed
+ 605 01e8 BC000000 		.4byte	0xbc
+ 606 01ec 03       		.byte	0x3
+ 607 01ed 23       		.byte	0x23
+ 608 01ee C40A     		.uleb128 0x544
+ 609 01f0 0E       		.uleb128 0xe
+ 610 01f1 1E000000 		.4byte	.LASF30
+ 611 01f5 06       		.byte	0x6
+ 612 01f6 EE06     		.2byte	0x6ee
+ 613 01f8 B7000000 		.4byte	0xb7
+ 614 01fc 03       		.byte	0x3
+ 615 01fd 23       		.byte	0x23
+ 616 01fe C80A     		.uleb128 0x548
+ 617 0200 0E       		.uleb128 0xe
+ 618 0201 D8020000 		.4byte	.LASF31
+ 619 0205 06       		.byte	0x6
+ 620 0206 EF06     		.2byte	0x6ef
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 14
+
+
+ 621 0208 B7000000 		.4byte	0xb7
+ 622 020c 03       		.byte	0x3
+ 623 020d 23       		.byte	0x23
+ 624 020e CC0A     		.uleb128 0x54c
+ 625 0210 00       		.byte	0
+ 626 0211 09       		.uleb128 0x9
+ 627 0212 BC000000 		.4byte	0xbc
+ 628 0216 21020000 		.4byte	0x221
+ 629 021a 0A       		.uleb128 0xa
+ 630 021b C6000000 		.4byte	0xc6
+ 631 021f FF       		.byte	0xff
+ 632 0220 00       		.byte	0
+ 633 0221 05       		.uleb128 0x5
+ 634 0222 11020000 		.4byte	0x211
+ 635 0226 06       		.uleb128 0x6
+ 636 0227 21020000 		.4byte	0x221
+ 637 022b 10       		.uleb128 0x10
+ 638 022c CA020000 		.4byte	.LASF32
+ 639 0230 06       		.byte	0x6
+ 640 0231 F006     		.2byte	0x6f0
+ 641 0233 3E010000 		.4byte	0x13e
+ 642 0237 11       		.uleb128 0x11
+ 643 0238 01       		.byte	0x1
+ 644 0239 0A020000 		.4byte	.LASF35
+ 645 023d 01       		.byte	0x1
+ 646 023e 5E       		.byte	0x5e
+ 647 023f 01       		.byte	0x1
+ 648 0240 C2000000 		.4byte	.LFB128
+ 649 0244 08010000 		.4byte	.LFE128
+ 650 0248 00000000 		.4byte	.LLST10
+ 651 024c 01       		.byte	0x1
+ 652 024d 88020000 		.4byte	0x288
+ 653 0251 12       		.uleb128 0x12
+ 654 0252 3D020000 		.4byte	.LASF33
+ 655 0256 01       		.byte	0x1
+ 656 0257 5E       		.byte	0x5e
+ 657 0258 AC000000 		.4byte	0xac
+ 658 025c 20000000 		.4byte	.LLST11
+ 659 0260 13       		.uleb128 0x13
+ 660 0261 73726300 		.ascii	"src\000"
+ 661 0265 01       		.byte	0x1
+ 662 0266 5E       		.byte	0x5e
+ 663 0267 88020000 		.4byte	0x288
+ 664 026b 41000000 		.4byte	.LLST12
+ 665 026f 12       		.uleb128 0x12
+ 666 0270 54000000 		.4byte	.LASF34
+ 667 0274 01       		.byte	0x1
+ 668 0275 5E       		.byte	0x5e
+ 669 0276 AC000000 		.4byte	0xac
+ 670 027a 6F000000 		.4byte	.LLST13
+ 671 027e 14       		.uleb128 0x14
+ 672 027f 6900     		.ascii	"i\000"
+ 673 0281 01       		.byte	0x1
+ 674 0282 60       		.byte	0x60
+ 675 0283 AC000000 		.4byte	0xac
+ 676 0287 00       		.byte	0
+ 677 0288 15       		.uleb128 0x15
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 15
+
+
+ 678 0289 04       		.byte	0x4
+ 679 028a C1000000 		.4byte	0xc1
+ 680 028e 11       		.uleb128 0x11
+ 681 028f 01       		.byte	0x1
+ 682 0290 A5020000 		.4byte	.LASF36
+ 683 0294 01       		.byte	0x1
+ 684 0295 55       		.byte	0x55
+ 685 0296 01       		.byte	0x1
+ 686 0297 A8000000 		.4byte	.LFB127
+ 687 029b C2000000 		.4byte	.LFE127
+ 688 029f 90000000 		.4byte	.LLST5
+ 689 02a3 01       		.byte	0x1
+ 690 02a4 FE020000 		.4byte	0x2fe
+ 691 02a8 12       		.uleb128 0x12
+ 692 02a9 3D020000 		.4byte	.LASF33
+ 693 02ad 01       		.byte	0x1
+ 694 02ae 55       		.byte	0x55
+ 695 02af AC000000 		.4byte	0xac
+ 696 02b3 B0000000 		.4byte	.LLST6
+ 697 02b7 13       		.uleb128 0x13
+ 698 02b8 73726300 		.ascii	"src\000"
+ 699 02bc 01       		.byte	0x1
+ 700 02bd 55       		.byte	0x55
+ 701 02be FE020000 		.4byte	0x2fe
+ 702 02c2 D1000000 		.4byte	.LLST7
+ 703 02c6 12       		.uleb128 0x12
+ 704 02c7 00020000 		.4byte	.LASF37
+ 705 02cb 01       		.byte	0x1
+ 706 02cc 55       		.byte	0x55
+ 707 02cd AC000000 		.4byte	0xac
+ 708 02d1 F2000000 		.4byte	.LLST8
+ 709 02d5 16       		.uleb128 0x16
+ 710 02d6 6900     		.ascii	"i\000"
+ 711 02d8 01       		.byte	0x1
+ 712 02d9 57       		.byte	0x57
+ 713 02da AC000000 		.4byte	0xac
+ 714 02de 13010000 		.4byte	.LLST9
+ 715 02e2 17       		.uleb128 0x17
+ 716 02e3 C0000000 		.4byte	.LVL12
+ 717 02e7 38030000 		.4byte	0x338
+ 718 02eb 18       		.uleb128 0x18
+ 719 02ec 01       		.byte	0x1
+ 720 02ed 50       		.byte	0x50
+ 721 02ee 07       		.byte	0x7
+ 722 02ef 74       		.byte	0x74
+ 723 02f0 00       		.sleb128 0
+ 724 02f1 76       		.byte	0x76
+ 725 02f2 00       		.sleb128 0
+ 726 02f3 22       		.byte	0x22
+ 727 02f4 31       		.byte	0x31
+ 728 02f5 1C       		.byte	0x1c
+ 729 02f6 18       		.uleb128 0x18
+ 730 02f7 01       		.byte	0x1
+ 731 02f8 51       		.byte	0x51
+ 732 02f9 02       		.byte	0x2
+ 733 02fa 71       		.byte	0x71
+ 734 02fb 00       		.sleb128 0
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 16
+
+
+ 735 02fc 00       		.byte	0
+ 736 02fd 00       		.byte	0
+ 737 02fe 15       		.uleb128 0x15
+ 738 02ff 04       		.byte	0x4
+ 739 0300 97000000 		.4byte	0x97
+ 740 0304 19       		.uleb128 0x19
+ 741 0305 01       		.byte	0x1
+ 742 0306 0A000000 		.4byte	.LASF38
+ 743 030a 01       		.byte	0x1
+ 744 030b 44       		.byte	0x44
+ 745 030c 01       		.byte	0x1
+ 746 030d 78000000 		.4byte	.LFB126
+ 747 0311 A8000000 		.4byte	.LFE126
+ 748 0315 02       		.byte	0x2
+ 749 0316 7D       		.byte	0x7d
+ 750 0317 00       		.sleb128 0
+ 751 0318 01       		.byte	0x1
+ 752 0319 38030000 		.4byte	0x338
+ 753 031d 1A       		.uleb128 0x1a
+ 754 031e 3D020000 		.4byte	.LASF33
+ 755 0322 01       		.byte	0x1
+ 756 0323 44       		.byte	0x44
+ 757 0324 AC000000 		.4byte	0xac
+ 758 0328 01       		.byte	0x1
+ 759 0329 50       		.byte	0x50
+ 760 032a 1A       		.uleb128 0x1a
+ 761 032b 23000000 		.4byte	.LASF39
+ 762 032f 01       		.byte	0x1
+ 763 0330 44       		.byte	0x44
+ 764 0331 AC000000 		.4byte	0xac
+ 765 0335 01       		.byte	0x1
+ 766 0336 51       		.byte	0x51
+ 767 0337 00       		.byte	0
+ 768 0338 11       		.uleb128 0x11
+ 769 0339 01       		.byte	0x1
+ 770 033a 29000000 		.4byte	.LASF40
+ 771 033e 01       		.byte	0x1
+ 772 033f 2D       		.byte	0x2d
+ 773 0340 01       		.byte	0x1
+ 774 0341 34000000 		.4byte	.LFB125
+ 775 0345 78000000 		.4byte	.LFE125
+ 776 0349 5B010000 		.4byte	.LLST0
+ 777 034d 01       		.byte	0x1
+ 778 034e 9C030000 		.4byte	0x39c
+ 779 0352 12       		.uleb128 0x12
+ 780 0353 3D020000 		.4byte	.LASF33
+ 781 0357 01       		.byte	0x1
+ 782 0358 2D       		.byte	0x2d
+ 783 0359 AC000000 		.4byte	0xac
+ 784 035d 7B010000 		.4byte	.LLST1
+ 785 0361 1A       		.uleb128 0x1a
+ 786 0362 23000000 		.4byte	.LASF39
+ 787 0366 01       		.byte	0x1
+ 788 0367 2D       		.byte	0x2d
+ 789 0368 8C000000 		.4byte	0x8c
+ 790 036c 01       		.byte	0x1
+ 791 036d 51       		.byte	0x51
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 17
+
+
+ 792 036e 1B       		.uleb128 0x1b
+ 793 036f 2E030000 		.4byte	.LASF41
+ 794 0373 01       		.byte	0x1
+ 795 0374 2F       		.byte	0x2f
+ 796 0375 AC000000 		.4byte	0xac
+ 797 0379 9C010000 		.4byte	.LLST2
+ 798 037d 1B       		.uleb128 0x1b
+ 799 037e 33020000 		.4byte	.LASF42
+ 800 0382 01       		.byte	0x1
+ 801 0383 30       		.byte	0x30
+ 802 0384 AC000000 		.4byte	0xac
+ 803 0388 C3010000 		.4byte	.LLST3
+ 804 038c 1B       		.uleb128 0x1b
+ 805 038d 8F020000 		.4byte	.LASF43
+ 806 0391 01       		.byte	0x1
+ 807 0392 31       		.byte	0x31
+ 808 0393 AC000000 		.4byte	0xac
+ 809 0397 F7010000 		.4byte	.LLST4
+ 810 039b 00       		.byte	0
+ 811 039c 1C       		.uleb128 0x1c
+ 812 039d 01       		.byte	0x1
+ 813 039e FC020000 		.4byte	.LASF47
+ 814 03a2 01       		.byte	0x1
+ 815 03a3 18       		.byte	0x18
+ 816 03a4 01       		.byte	0x1
+ 817 03a5 00000000 		.4byte	.LFB124
+ 818 03a9 34000000 		.4byte	.LFE124
+ 819 03ad 02       		.byte	0x2
+ 820 03ae 7D       		.byte	0x7d
+ 821 03af 00       		.sleb128 0
+ 822 03b0 01       		.byte	0x1
+ 823 03b1 1A       		.uleb128 0x1a
+ 824 03b2 3D020000 		.4byte	.LASF33
+ 825 03b6 01       		.byte	0x1
+ 826 03b7 18       		.byte	0x18
+ 827 03b8 AC000000 		.4byte	0xac
+ 828 03bc 01       		.byte	0x1
+ 829 03bd 50       		.byte	0x50
+ 830 03be 00       		.byte	0
+ 831 03bf 00       		.byte	0
+ 832              		.section	.debug_abbrev,"",%progbits
+ 833              	.Ldebug_abbrev0:
+ 834 0000 01       		.uleb128 0x1
+ 835 0001 11       		.uleb128 0x11
+ 836 0002 01       		.byte	0x1
+ 837 0003 25       		.uleb128 0x25
+ 838 0004 0E       		.uleb128 0xe
+ 839 0005 13       		.uleb128 0x13
+ 840 0006 0B       		.uleb128 0xb
+ 841 0007 03       		.uleb128 0x3
+ 842 0008 0E       		.uleb128 0xe
+ 843 0009 1B       		.uleb128 0x1b
+ 844 000a 0E       		.uleb128 0xe
+ 845 000b 11       		.uleb128 0x11
+ 846 000c 01       		.uleb128 0x1
+ 847 000d 12       		.uleb128 0x12
+ 848 000e 01       		.uleb128 0x1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 18
+
+
+ 849 000f 10       		.uleb128 0x10
+ 850 0010 06       		.uleb128 0x6
+ 851 0011 00       		.byte	0
+ 852 0012 00       		.byte	0
+ 853 0013 02       		.uleb128 0x2
+ 854 0014 24       		.uleb128 0x24
+ 855 0015 00       		.byte	0
+ 856 0016 0B       		.uleb128 0xb
+ 857 0017 0B       		.uleb128 0xb
+ 858 0018 3E       		.uleb128 0x3e
+ 859 0019 0B       		.uleb128 0xb
+ 860 001a 03       		.uleb128 0x3
+ 861 001b 0E       		.uleb128 0xe
+ 862 001c 00       		.byte	0
+ 863 001d 00       		.byte	0
+ 864 001e 03       		.uleb128 0x3
+ 865 001f 16       		.uleb128 0x16
+ 866 0020 00       		.byte	0
+ 867 0021 03       		.uleb128 0x3
+ 868 0022 0E       		.uleb128 0xe
+ 869 0023 3A       		.uleb128 0x3a
+ 870 0024 0B       		.uleb128 0xb
+ 871 0025 3B       		.uleb128 0x3b
+ 872 0026 0B       		.uleb128 0xb
+ 873 0027 49       		.uleb128 0x49
+ 874 0028 13       		.uleb128 0x13
+ 875 0029 00       		.byte	0
+ 876 002a 00       		.byte	0
+ 877 002b 04       		.uleb128 0x4
+ 878 002c 24       		.uleb128 0x24
+ 879 002d 00       		.byte	0
+ 880 002e 0B       		.uleb128 0xb
+ 881 002f 0B       		.uleb128 0xb
+ 882 0030 3E       		.uleb128 0x3e
+ 883 0031 0B       		.uleb128 0xb
+ 884 0032 03       		.uleb128 0x3
+ 885 0033 08       		.uleb128 0x8
+ 886 0034 00       		.byte	0
+ 887 0035 00       		.byte	0
+ 888 0036 05       		.uleb128 0x5
+ 889 0037 26       		.uleb128 0x26
+ 890 0038 00       		.byte	0
+ 891 0039 49       		.uleb128 0x49
+ 892 003a 13       		.uleb128 0x13
+ 893 003b 00       		.byte	0
+ 894 003c 00       		.byte	0
+ 895 003d 06       		.uleb128 0x6
+ 896 003e 35       		.uleb128 0x35
+ 897 003f 00       		.byte	0
+ 898 0040 49       		.uleb128 0x49
+ 899 0041 13       		.uleb128 0x13
+ 900 0042 00       		.byte	0
+ 901 0043 00       		.byte	0
+ 902 0044 07       		.uleb128 0x7
+ 903 0045 34       		.uleb128 0x34
+ 904 0046 00       		.byte	0
+ 905 0047 03       		.uleb128 0x3
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 19
+
+
+ 906 0048 0E       		.uleb128 0xe
+ 907 0049 3A       		.uleb128 0x3a
+ 908 004a 0B       		.uleb128 0xb
+ 909 004b 3B       		.uleb128 0x3b
+ 910 004c 05       		.uleb128 0x5
+ 911 004d 49       		.uleb128 0x49
+ 912 004e 13       		.uleb128 0x13
+ 913 004f 3F       		.uleb128 0x3f
+ 914 0050 0C       		.uleb128 0xc
+ 915 0051 3C       		.uleb128 0x3c
+ 916 0052 0C       		.uleb128 0xc
+ 917 0053 00       		.byte	0
+ 918 0054 00       		.byte	0
+ 919 0055 08       		.uleb128 0x8
+ 920 0056 34       		.uleb128 0x34
+ 921 0057 00       		.byte	0
+ 922 0058 03       		.uleb128 0x3
+ 923 0059 0E       		.uleb128 0xe
+ 924 005a 3A       		.uleb128 0x3a
+ 925 005b 0B       		.uleb128 0xb
+ 926 005c 3B       		.uleb128 0x3b
+ 927 005d 0B       		.uleb128 0xb
+ 928 005e 49       		.uleb128 0x49
+ 929 005f 13       		.uleb128 0x13
+ 930 0060 3F       		.uleb128 0x3f
+ 931 0061 0C       		.uleb128 0xc
+ 932 0062 3C       		.uleb128 0x3c
+ 933 0063 0C       		.uleb128 0xc
+ 934 0064 00       		.byte	0
+ 935 0065 00       		.byte	0
+ 936 0066 09       		.uleb128 0x9
+ 937 0067 01       		.uleb128 0x1
+ 938 0068 01       		.byte	0x1
+ 939 0069 49       		.uleb128 0x49
+ 940 006a 13       		.uleb128 0x13
+ 941 006b 01       		.uleb128 0x1
+ 942 006c 13       		.uleb128 0x13
+ 943 006d 00       		.byte	0
+ 944 006e 00       		.byte	0
+ 945 006f 0A       		.uleb128 0xa
+ 946 0070 21       		.uleb128 0x21
+ 947 0071 00       		.byte	0
+ 948 0072 49       		.uleb128 0x49
+ 949 0073 13       		.uleb128 0x13
+ 950 0074 2F       		.uleb128 0x2f
+ 951 0075 0B       		.uleb128 0xb
+ 952 0076 00       		.byte	0
+ 953 0077 00       		.byte	0
+ 954 0078 0B       		.uleb128 0xb
+ 955 0079 17       		.uleb128 0x17
+ 956 007a 01       		.byte	0x1
+ 957 007b 0B       		.uleb128 0xb
+ 958 007c 0B       		.uleb128 0xb
+ 959 007d 3A       		.uleb128 0x3a
+ 960 007e 0B       		.uleb128 0xb
+ 961 007f 3B       		.uleb128 0x3b
+ 962 0080 05       		.uleb128 0x5
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 20
+
+
+ 963 0081 01       		.uleb128 0x1
+ 964 0082 13       		.uleb128 0x13
+ 965 0083 00       		.byte	0
+ 966 0084 00       		.byte	0
+ 967 0085 0C       		.uleb128 0xc
+ 968 0086 0D       		.uleb128 0xd
+ 969 0087 00       		.byte	0
+ 970 0088 03       		.uleb128 0x3
+ 971 0089 0E       		.uleb128 0xe
+ 972 008a 3A       		.uleb128 0x3a
+ 973 008b 0B       		.uleb128 0xb
+ 974 008c 3B       		.uleb128 0x3b
+ 975 008d 05       		.uleb128 0x5
+ 976 008e 49       		.uleb128 0x49
+ 977 008f 13       		.uleb128 0x13
+ 978 0090 00       		.byte	0
+ 979 0091 00       		.byte	0
+ 980 0092 0D       		.uleb128 0xd
+ 981 0093 13       		.uleb128 0x13
+ 982 0094 01       		.byte	0x1
+ 983 0095 0B       		.uleb128 0xb
+ 984 0096 05       		.uleb128 0x5
+ 985 0097 3A       		.uleb128 0x3a
+ 986 0098 0B       		.uleb128 0xb
+ 987 0099 3B       		.uleb128 0x3b
+ 988 009a 05       		.uleb128 0x5
+ 989 009b 01       		.uleb128 0x1
+ 990 009c 13       		.uleb128 0x13
+ 991 009d 00       		.byte	0
+ 992 009e 00       		.byte	0
+ 993 009f 0E       		.uleb128 0xe
+ 994 00a0 0D       		.uleb128 0xd
+ 995 00a1 00       		.byte	0
+ 996 00a2 03       		.uleb128 0x3
+ 997 00a3 0E       		.uleb128 0xe
+ 998 00a4 3A       		.uleb128 0x3a
+ 999 00a5 0B       		.uleb128 0xb
+ 1000 00a6 3B       		.uleb128 0x3b
+ 1001 00a7 05       		.uleb128 0x5
+ 1002 00a8 49       		.uleb128 0x49
+ 1003 00a9 13       		.uleb128 0x13
+ 1004 00aa 38       		.uleb128 0x38
+ 1005 00ab 0A       		.uleb128 0xa
+ 1006 00ac 00       		.byte	0
+ 1007 00ad 00       		.byte	0
+ 1008 00ae 0F       		.uleb128 0xf
+ 1009 00af 0D       		.uleb128 0xd
+ 1010 00b0 00       		.byte	0
+ 1011 00b1 49       		.uleb128 0x49
+ 1012 00b2 13       		.uleb128 0x13
+ 1013 00b3 38       		.uleb128 0x38
+ 1014 00b4 0A       		.uleb128 0xa
+ 1015 00b5 00       		.byte	0
+ 1016 00b6 00       		.byte	0
+ 1017 00b7 10       		.uleb128 0x10
+ 1018 00b8 16       		.uleb128 0x16
+ 1019 00b9 00       		.byte	0
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 21
+
+
+ 1020 00ba 03       		.uleb128 0x3
+ 1021 00bb 0E       		.uleb128 0xe
+ 1022 00bc 3A       		.uleb128 0x3a
+ 1023 00bd 0B       		.uleb128 0xb
+ 1024 00be 3B       		.uleb128 0x3b
+ 1025 00bf 05       		.uleb128 0x5
+ 1026 00c0 49       		.uleb128 0x49
+ 1027 00c1 13       		.uleb128 0x13
+ 1028 00c2 00       		.byte	0
+ 1029 00c3 00       		.byte	0
+ 1030 00c4 11       		.uleb128 0x11
+ 1031 00c5 2E       		.uleb128 0x2e
+ 1032 00c6 01       		.byte	0x1
+ 1033 00c7 3F       		.uleb128 0x3f
+ 1034 00c8 0C       		.uleb128 0xc
+ 1035 00c9 03       		.uleb128 0x3
+ 1036 00ca 0E       		.uleb128 0xe
+ 1037 00cb 3A       		.uleb128 0x3a
+ 1038 00cc 0B       		.uleb128 0xb
+ 1039 00cd 3B       		.uleb128 0x3b
+ 1040 00ce 0B       		.uleb128 0xb
+ 1041 00cf 27       		.uleb128 0x27
+ 1042 00d0 0C       		.uleb128 0xc
+ 1043 00d1 11       		.uleb128 0x11
+ 1044 00d2 01       		.uleb128 0x1
+ 1045 00d3 12       		.uleb128 0x12
+ 1046 00d4 01       		.uleb128 0x1
+ 1047 00d5 40       		.uleb128 0x40
+ 1048 00d6 06       		.uleb128 0x6
+ 1049 00d7 9742     		.uleb128 0x2117
+ 1050 00d9 0C       		.uleb128 0xc
+ 1051 00da 01       		.uleb128 0x1
+ 1052 00db 13       		.uleb128 0x13
+ 1053 00dc 00       		.byte	0
+ 1054 00dd 00       		.byte	0
+ 1055 00de 12       		.uleb128 0x12
+ 1056 00df 05       		.uleb128 0x5
+ 1057 00e0 00       		.byte	0
+ 1058 00e1 03       		.uleb128 0x3
+ 1059 00e2 0E       		.uleb128 0xe
+ 1060 00e3 3A       		.uleb128 0x3a
+ 1061 00e4 0B       		.uleb128 0xb
+ 1062 00e5 3B       		.uleb128 0x3b
+ 1063 00e6 0B       		.uleb128 0xb
+ 1064 00e7 49       		.uleb128 0x49
+ 1065 00e8 13       		.uleb128 0x13
+ 1066 00e9 02       		.uleb128 0x2
+ 1067 00ea 06       		.uleb128 0x6
+ 1068 00eb 00       		.byte	0
+ 1069 00ec 00       		.byte	0
+ 1070 00ed 13       		.uleb128 0x13
+ 1071 00ee 05       		.uleb128 0x5
+ 1072 00ef 00       		.byte	0
+ 1073 00f0 03       		.uleb128 0x3
+ 1074 00f1 08       		.uleb128 0x8
+ 1075 00f2 3A       		.uleb128 0x3a
+ 1076 00f3 0B       		.uleb128 0xb
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 22
+
+
+ 1077 00f4 3B       		.uleb128 0x3b
+ 1078 00f5 0B       		.uleb128 0xb
+ 1079 00f6 49       		.uleb128 0x49
+ 1080 00f7 13       		.uleb128 0x13
+ 1081 00f8 02       		.uleb128 0x2
+ 1082 00f9 06       		.uleb128 0x6
+ 1083 00fa 00       		.byte	0
+ 1084 00fb 00       		.byte	0
+ 1085 00fc 14       		.uleb128 0x14
+ 1086 00fd 34       		.uleb128 0x34
+ 1087 00fe 00       		.byte	0
+ 1088 00ff 03       		.uleb128 0x3
+ 1089 0100 08       		.uleb128 0x8
+ 1090 0101 3A       		.uleb128 0x3a
+ 1091 0102 0B       		.uleb128 0xb
+ 1092 0103 3B       		.uleb128 0x3b
+ 1093 0104 0B       		.uleb128 0xb
+ 1094 0105 49       		.uleb128 0x49
+ 1095 0106 13       		.uleb128 0x13
+ 1096 0107 00       		.byte	0
+ 1097 0108 00       		.byte	0
+ 1098 0109 15       		.uleb128 0x15
+ 1099 010a 0F       		.uleb128 0xf
+ 1100 010b 00       		.byte	0
+ 1101 010c 0B       		.uleb128 0xb
+ 1102 010d 0B       		.uleb128 0xb
+ 1103 010e 49       		.uleb128 0x49
+ 1104 010f 13       		.uleb128 0x13
+ 1105 0110 00       		.byte	0
+ 1106 0111 00       		.byte	0
+ 1107 0112 16       		.uleb128 0x16
+ 1108 0113 34       		.uleb128 0x34
+ 1109 0114 00       		.byte	0
+ 1110 0115 03       		.uleb128 0x3
+ 1111 0116 08       		.uleb128 0x8
+ 1112 0117 3A       		.uleb128 0x3a
+ 1113 0118 0B       		.uleb128 0xb
+ 1114 0119 3B       		.uleb128 0x3b
+ 1115 011a 0B       		.uleb128 0xb
+ 1116 011b 49       		.uleb128 0x49
+ 1117 011c 13       		.uleb128 0x13
+ 1118 011d 02       		.uleb128 0x2
+ 1119 011e 06       		.uleb128 0x6
+ 1120 011f 00       		.byte	0
+ 1121 0120 00       		.byte	0
+ 1122 0121 17       		.uleb128 0x17
+ 1123 0122 898201   		.uleb128 0x4109
+ 1124 0125 01       		.byte	0x1
+ 1125 0126 11       		.uleb128 0x11
+ 1126 0127 01       		.uleb128 0x1
+ 1127 0128 31       		.uleb128 0x31
+ 1128 0129 13       		.uleb128 0x13
+ 1129 012a 00       		.byte	0
+ 1130 012b 00       		.byte	0
+ 1131 012c 18       		.uleb128 0x18
+ 1132 012d 8A8201   		.uleb128 0x410a
+ 1133 0130 00       		.byte	0
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 23
+
+
+ 1134 0131 02       		.uleb128 0x2
+ 1135 0132 0A       		.uleb128 0xa
+ 1136 0133 9142     		.uleb128 0x2111
+ 1137 0135 0A       		.uleb128 0xa
+ 1138 0136 00       		.byte	0
+ 1139 0137 00       		.byte	0
+ 1140 0138 19       		.uleb128 0x19
+ 1141 0139 2E       		.uleb128 0x2e
+ 1142 013a 01       		.byte	0x1
+ 1143 013b 3F       		.uleb128 0x3f
+ 1144 013c 0C       		.uleb128 0xc
+ 1145 013d 03       		.uleb128 0x3
+ 1146 013e 0E       		.uleb128 0xe
+ 1147 013f 3A       		.uleb128 0x3a
+ 1148 0140 0B       		.uleb128 0xb
+ 1149 0141 3B       		.uleb128 0x3b
+ 1150 0142 0B       		.uleb128 0xb
+ 1151 0143 27       		.uleb128 0x27
+ 1152 0144 0C       		.uleb128 0xc
+ 1153 0145 11       		.uleb128 0x11
+ 1154 0146 01       		.uleb128 0x1
+ 1155 0147 12       		.uleb128 0x12
+ 1156 0148 01       		.uleb128 0x1
+ 1157 0149 40       		.uleb128 0x40
+ 1158 014a 0A       		.uleb128 0xa
+ 1159 014b 9742     		.uleb128 0x2117
+ 1160 014d 0C       		.uleb128 0xc
+ 1161 014e 01       		.uleb128 0x1
+ 1162 014f 13       		.uleb128 0x13
+ 1163 0150 00       		.byte	0
+ 1164 0151 00       		.byte	0
+ 1165 0152 1A       		.uleb128 0x1a
+ 1166 0153 05       		.uleb128 0x5
+ 1167 0154 00       		.byte	0
+ 1168 0155 03       		.uleb128 0x3
+ 1169 0156 0E       		.uleb128 0xe
+ 1170 0157 3A       		.uleb128 0x3a
+ 1171 0158 0B       		.uleb128 0xb
+ 1172 0159 3B       		.uleb128 0x3b
+ 1173 015a 0B       		.uleb128 0xb
+ 1174 015b 49       		.uleb128 0x49
+ 1175 015c 13       		.uleb128 0x13
+ 1176 015d 02       		.uleb128 0x2
+ 1177 015e 0A       		.uleb128 0xa
+ 1178 015f 00       		.byte	0
+ 1179 0160 00       		.byte	0
+ 1180 0161 1B       		.uleb128 0x1b
+ 1181 0162 34       		.uleb128 0x34
+ 1182 0163 00       		.byte	0
+ 1183 0164 03       		.uleb128 0x3
+ 1184 0165 0E       		.uleb128 0xe
+ 1185 0166 3A       		.uleb128 0x3a
+ 1186 0167 0B       		.uleb128 0xb
+ 1187 0168 3B       		.uleb128 0x3b
+ 1188 0169 0B       		.uleb128 0xb
+ 1189 016a 49       		.uleb128 0x49
+ 1190 016b 13       		.uleb128 0x13
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 24
+
+
+ 1191 016c 02       		.uleb128 0x2
+ 1192 016d 06       		.uleb128 0x6
+ 1193 016e 00       		.byte	0
+ 1194 016f 00       		.byte	0
+ 1195 0170 1C       		.uleb128 0x1c
+ 1196 0171 2E       		.uleb128 0x2e
+ 1197 0172 01       		.byte	0x1
+ 1198 0173 3F       		.uleb128 0x3f
+ 1199 0174 0C       		.uleb128 0xc
+ 1200 0175 03       		.uleb128 0x3
+ 1201 0176 0E       		.uleb128 0xe
+ 1202 0177 3A       		.uleb128 0x3a
+ 1203 0178 0B       		.uleb128 0xb
+ 1204 0179 3B       		.uleb128 0x3b
+ 1205 017a 0B       		.uleb128 0xb
+ 1206 017b 27       		.uleb128 0x27
+ 1207 017c 0C       		.uleb128 0xc
+ 1208 017d 11       		.uleb128 0x11
+ 1209 017e 01       		.uleb128 0x1
+ 1210 017f 12       		.uleb128 0x12
+ 1211 0180 01       		.uleb128 0x1
+ 1212 0181 40       		.uleb128 0x40
+ 1213 0182 0A       		.uleb128 0xa
+ 1214 0183 9742     		.uleb128 0x2117
+ 1215 0185 0C       		.uleb128 0xc
+ 1216 0186 00       		.byte	0
+ 1217 0187 00       		.byte	0
+ 1218 0188 00       		.byte	0
+ 1219              		.section	.debug_loc,"",%progbits
+ 1220              	.Ldebug_loc0:
+ 1221              	.LLST10:
+ 1222 0000 C2000000 		.4byte	.LFB128-.Ltext0
+ 1223 0004 C6000000 		.4byte	.LCFI2-.Ltext0
+ 1224 0008 0200     		.2byte	0x2
+ 1225 000a 7D       		.byte	0x7d
+ 1226 000b 00       		.sleb128 0
+ 1227 000c C6000000 		.4byte	.LCFI2-.Ltext0
+ 1228 0010 08010000 		.4byte	.LFE128-.Ltext0
+ 1229 0014 0200     		.2byte	0x2
+ 1230 0016 7D       		.byte	0x7d
+ 1231 0017 08       		.sleb128 8
+ 1232 0018 00000000 		.4byte	0
+ 1233 001c 00000000 		.4byte	0
+ 1234              	.LLST11:
+ 1235 0020 C2000000 		.4byte	.LVL13-.Ltext0
+ 1236 0024 DC000000 		.4byte	.LVL15-.Ltext0
+ 1237 0028 0100     		.2byte	0x1
+ 1238 002a 50       		.byte	0x50
+ 1239 002b DC000000 		.4byte	.LVL15-.Ltext0
+ 1240 002f 08010000 		.4byte	.LFE128-.Ltext0
+ 1241 0033 0400     		.2byte	0x4
+ 1242 0035 F3       		.byte	0xf3
+ 1243 0036 01       		.uleb128 0x1
+ 1244 0037 50       		.byte	0x50
+ 1245 0038 9F       		.byte	0x9f
+ 1246 0039 00000000 		.4byte	0
+ 1247 003d 00000000 		.4byte	0
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 25
+
+
+ 1248              	.LLST12:
+ 1249 0041 C2000000 		.4byte	.LVL13-.Ltext0
+ 1250 0045 D8000000 		.4byte	.LVL14-.Ltext0
+ 1251 0049 0100     		.2byte	0x1
+ 1252 004b 51       		.byte	0x51
+ 1253 004c D8000000 		.4byte	.LVL14-.Ltext0
+ 1254 0050 DC000000 		.4byte	.LVL15-.Ltext0
+ 1255 0054 0300     		.2byte	0x3
+ 1256 0056 71       		.byte	0x71
+ 1257 0057 04       		.sleb128 4
+ 1258 0058 9F       		.byte	0x9f
+ 1259 0059 DC000000 		.4byte	.LVL15-.Ltext0
+ 1260 005d 08010000 		.4byte	.LFE128-.Ltext0
+ 1261 0061 0400     		.2byte	0x4
+ 1262 0063 F3       		.byte	0xf3
+ 1263 0064 01       		.uleb128 0x1
+ 1264 0065 51       		.byte	0x51
+ 1265 0066 9F       		.byte	0x9f
+ 1266 0067 00000000 		.4byte	0
+ 1267 006b 00000000 		.4byte	0
+ 1268              	.LLST13:
+ 1269 006f C2000000 		.4byte	.LVL13-.Ltext0
+ 1270 0073 DC000000 		.4byte	.LVL15-.Ltext0
+ 1271 0077 0100     		.2byte	0x1
+ 1272 0079 52       		.byte	0x52
+ 1273 007a DC000000 		.4byte	.LVL15-.Ltext0
+ 1274 007e 08010000 		.4byte	.LFE128-.Ltext0
+ 1275 0082 0400     		.2byte	0x4
+ 1276 0084 F3       		.byte	0xf3
+ 1277 0085 01       		.uleb128 0x1
+ 1278 0086 52       		.byte	0x52
+ 1279 0087 9F       		.byte	0x9f
+ 1280 0088 00000000 		.4byte	0
+ 1281 008c 00000000 		.4byte	0
+ 1282              	.LLST5:
+ 1283 0090 A8000000 		.4byte	.LFB127-.Ltext0
+ 1284 0094 AA000000 		.4byte	.LCFI1-.Ltext0
+ 1285 0098 0200     		.2byte	0x2
+ 1286 009a 7D       		.byte	0x7d
+ 1287 009b 00       		.sleb128 0
+ 1288 009c AA000000 		.4byte	.LCFI1-.Ltext0
+ 1289 00a0 C2000000 		.4byte	.LFE127-.Ltext0
+ 1290 00a4 0200     		.2byte	0x2
+ 1291 00a6 7D       		.byte	0x7d
+ 1292 00a7 10       		.sleb128 16
+ 1293 00a8 00000000 		.4byte	0
+ 1294 00ac 00000000 		.4byte	0
+ 1295              	.LLST6:
+ 1296 00b0 A8000000 		.4byte	.LVL8-.Ltext0
+ 1297 00b4 B0000000 		.4byte	.LVL9-.Ltext0
+ 1298 00b8 0100     		.2byte	0x1
+ 1299 00ba 50       		.byte	0x50
+ 1300 00bb B0000000 		.4byte	.LVL9-.Ltext0
+ 1301 00bf C2000000 		.4byte	.LFE127-.Ltext0
+ 1302 00c3 0400     		.2byte	0x4
+ 1303 00c5 F3       		.byte	0xf3
+ 1304 00c6 01       		.uleb128 0x1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 26
+
+
+ 1305 00c7 50       		.byte	0x50
+ 1306 00c8 9F       		.byte	0x9f
+ 1307 00c9 00000000 		.4byte	0
+ 1308 00cd 00000000 		.4byte	0
+ 1309              	.LLST7:
+ 1310 00d1 A8000000 		.4byte	.LVL8-.Ltext0
+ 1311 00d5 B0000000 		.4byte	.LVL9-.Ltext0
+ 1312 00d9 0100     		.2byte	0x1
+ 1313 00db 51       		.byte	0x51
+ 1314 00dc B0000000 		.4byte	.LVL9-.Ltext0
+ 1315 00e0 C2000000 		.4byte	.LFE127-.Ltext0
+ 1316 00e4 0400     		.2byte	0x4
+ 1317 00e6 F3       		.byte	0xf3
+ 1318 00e7 01       		.uleb128 0x1
+ 1319 00e8 51       		.byte	0x51
+ 1320 00e9 9F       		.byte	0x9f
+ 1321 00ea 00000000 		.4byte	0
+ 1322 00ee 00000000 		.4byte	0
+ 1323              	.LLST8:
+ 1324 00f2 A8000000 		.4byte	.LVL8-.Ltext0
+ 1325 00f6 B0000000 		.4byte	.LVL9-.Ltext0
+ 1326 00fa 0100     		.2byte	0x1
+ 1327 00fc 52       		.byte	0x52
+ 1328 00fd B0000000 		.4byte	.LVL9-.Ltext0
+ 1329 0101 C2000000 		.4byte	.LFE127-.Ltext0
+ 1330 0105 0400     		.2byte	0x4
+ 1331 0107 F3       		.byte	0xf3
+ 1332 0108 01       		.uleb128 0x1
+ 1333 0109 52       		.byte	0x52
+ 1334 010a 9F       		.byte	0x9f
+ 1335 010b 00000000 		.4byte	0
+ 1336 010f 00000000 		.4byte	0
+ 1337              	.LLST9:
+ 1338 0113 A8000000 		.4byte	.LVL8-.Ltext0
+ 1339 0117 B0000000 		.4byte	.LVL9-.Ltext0
+ 1340 011b 0200     		.2byte	0x2
+ 1341 011d 30       		.byte	0x30
+ 1342 011e 9F       		.byte	0x9f
+ 1343 011f B0000000 		.4byte	.LVL9-.Ltext0
+ 1344 0123 BC000000 		.4byte	.LVL11-.Ltext0
+ 1345 0127 0700     		.2byte	0x7
+ 1346 0129 74       		.byte	0x74
+ 1347 012a 00       		.sleb128 0
+ 1348 012b F3       		.byte	0xf3
+ 1349 012c 01       		.uleb128 0x1
+ 1350 012d 51       		.byte	0x51
+ 1351 012e 1C       		.byte	0x1c
+ 1352 012f 9F       		.byte	0x9f
+ 1353 0130 BC000000 		.4byte	.LVL11-.Ltext0
+ 1354 0134 C0000000 		.4byte	.LVL12-.Ltext0
+ 1355 0138 0800     		.2byte	0x8
+ 1356 013a F3       		.byte	0xf3
+ 1357 013b 01       		.uleb128 0x1
+ 1358 013c 51       		.byte	0x51
+ 1359 013d 20       		.byte	0x20
+ 1360 013e 74       		.byte	0x74
+ 1361 013f 00       		.sleb128 0
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 27
+
+
+ 1362 0140 22       		.byte	0x22
+ 1363 0141 9F       		.byte	0x9f
+ 1364 0142 C0000000 		.4byte	.LVL12-.Ltext0
+ 1365 0146 C2000000 		.4byte	.LFE127-.Ltext0
+ 1366 014a 0700     		.2byte	0x7
+ 1367 014c 74       		.byte	0x74
+ 1368 014d 00       		.sleb128 0
+ 1369 014e F3       		.byte	0xf3
+ 1370 014f 01       		.uleb128 0x1
+ 1371 0150 51       		.byte	0x51
+ 1372 0151 1C       		.byte	0x1c
+ 1373 0152 9F       		.byte	0x9f
+ 1374 0153 00000000 		.4byte	0
+ 1375 0157 00000000 		.4byte	0
+ 1376              	.LLST0:
+ 1377 015b 34000000 		.4byte	.LFB125-.Ltext0
+ 1378 015f 36000000 		.4byte	.LCFI0-.Ltext0
+ 1379 0163 0200     		.2byte	0x2
+ 1380 0165 7D       		.byte	0x7d
+ 1381 0166 00       		.sleb128 0
+ 1382 0167 36000000 		.4byte	.LCFI0-.Ltext0
+ 1383 016b 78000000 		.4byte	.LFE125-.Ltext0
+ 1384 016f 0200     		.2byte	0x2
+ 1385 0171 7D       		.byte	0x7d
+ 1386 0172 08       		.sleb128 8
+ 1387 0173 00000000 		.4byte	0
+ 1388 0177 00000000 		.4byte	0
+ 1389              	.LLST1:
+ 1390 017b 34000000 		.4byte	.LVL1-.Ltext0
+ 1391 017f 3C000000 		.4byte	.LVL3-.Ltext0
+ 1392 0183 0100     		.2byte	0x1
+ 1393 0185 50       		.byte	0x50
+ 1394 0186 3C000000 		.4byte	.LVL3-.Ltext0
+ 1395 018a 78000000 		.4byte	.LFE125-.Ltext0
+ 1396 018e 0400     		.2byte	0x4
+ 1397 0190 F3       		.byte	0xf3
+ 1398 0191 01       		.uleb128 0x1
+ 1399 0192 50       		.byte	0x50
+ 1400 0193 9F       		.byte	0x9f
+ 1401 0194 00000000 		.4byte	0
+ 1402 0198 00000000 		.4byte	0
+ 1403              	.LLST2:
+ 1404 019c 34000000 		.4byte	.LVL1-.Ltext0
+ 1405 01a0 3C000000 		.4byte	.LVL3-.Ltext0
+ 1406 01a4 0500     		.2byte	0x5
+ 1407 01a6 70       		.byte	0x70
+ 1408 01a7 00       		.sleb128 0
+ 1409 01a8 33       		.byte	0x33
+ 1410 01a9 1A       		.byte	0x1a
+ 1411 01aa 9F       		.byte	0x9f
+ 1412 01ab 3C000000 		.4byte	.LVL3-.Ltext0
+ 1413 01af 78000000 		.4byte	.LFE125-.Ltext0
+ 1414 01b3 0600     		.2byte	0x6
+ 1415 01b5 F3       		.byte	0xf3
+ 1416 01b6 01       		.uleb128 0x1
+ 1417 01b7 50       		.byte	0x50
+ 1418 01b8 33       		.byte	0x33
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 28
+
+
+ 1419 01b9 1A       		.byte	0x1a
+ 1420 01ba 9F       		.byte	0x9f
+ 1421 01bb 00000000 		.4byte	0
+ 1422 01bf 00000000 		.4byte	0
+ 1423              	.LLST3:
+ 1424 01c3 34000000 		.4byte	.LVL1-.Ltext0
+ 1425 01c7 3A000000 		.4byte	.LVL2-.Ltext0
+ 1426 01cb 0600     		.2byte	0x6
+ 1427 01cd 70       		.byte	0x70
+ 1428 01ce 00       		.sleb128 0
+ 1429 01cf 09       		.byte	0x9
+ 1430 01d0 FC       		.byte	0xfc
+ 1431 01d1 1A       		.byte	0x1a
+ 1432 01d2 9F       		.byte	0x9f
+ 1433 01d3 3A000000 		.4byte	.LVL2-.Ltext0
+ 1434 01d7 74000000 		.4byte	.LVL6-.Ltext0
+ 1435 01db 0100     		.2byte	0x1
+ 1436 01dd 54       		.byte	0x54
+ 1437 01de 74000000 		.4byte	.LVL6-.Ltext0
+ 1438 01e2 78000000 		.4byte	.LFE125-.Ltext0
+ 1439 01e6 0700     		.2byte	0x7
+ 1440 01e8 F3       		.byte	0xf3
+ 1441 01e9 01       		.uleb128 0x1
+ 1442 01ea 50       		.byte	0x50
+ 1443 01eb 09       		.byte	0x9
+ 1444 01ec FC       		.byte	0xfc
+ 1445 01ed 1A       		.byte	0x1a
+ 1446 01ee 9F       		.byte	0x9f
+ 1447 01ef 00000000 		.4byte	0
+ 1448 01f3 00000000 		.4byte	0
+ 1449              	.LLST4:
+ 1450 01f7 50000000 		.4byte	.LVL4-.Ltext0
+ 1451 01fb 52000000 		.4byte	.LVL5-.Ltext0
+ 1452 01ff 0100     		.2byte	0x1
+ 1453 0201 53       		.byte	0x53
+ 1454 0202 52000000 		.4byte	.LVL5-.Ltext0
+ 1455 0206 78000000 		.4byte	.LFE125-.Ltext0
+ 1456 020a 0100     		.2byte	0x1
+ 1457 020c 50       		.byte	0x50
+ 1458 020d 00000000 		.4byte	0
+ 1459 0211 00000000 		.4byte	0
+ 1460              		.section	.debug_aranges,"",%progbits
+ 1461 0000 1C000000 		.4byte	0x1c
+ 1462 0004 0200     		.2byte	0x2
+ 1463 0006 00000000 		.4byte	.Ldebug_info0
+ 1464 000a 04       		.byte	0x4
+ 1465 000b 00       		.byte	0
+ 1466 000c 0000     		.2byte	0
+ 1467 000e 0000     		.2byte	0
+ 1468 0010 00000000 		.4byte	.Ltext0
+ 1469 0014 08010000 		.4byte	.Letext0-.Ltext0
+ 1470 0018 00000000 		.4byte	0
+ 1471 001c 00000000 		.4byte	0
+ 1472              		.section	.debug_line,"",%progbits
+ 1473              	.Ldebug_line0:
+ 1474 0000 DD020000 		.section	.debug_str,"MS",%progbits,1
+ 1474      02005C02 
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 29
+
+
+ 1474      00000201 
+ 1474      FB0E0D00 
+ 1474      01010101 
+ 1475              	.LASF4:
+ 1476 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1476      6E74385F 
+ 1476      7400
+ 1477              	.LASF38:
+ 1478 000a 6E72665F 		.ascii	"nrf_nvmc_write_word\000"
+ 1478      6E766D63 
+ 1478      5F777269 
+ 1478      74655F77 
+ 1478      6F726400 
+ 1479              	.LASF30:
+ 1480 001e 49484954 		.ascii	"IHIT\000"
+ 1480      00
+ 1481              	.LASF39:
+ 1482 0023 76616C75 		.ascii	"value\000"
+ 1482      6500
+ 1483              	.LASF40:
+ 1484 0029 6E72665F 		.ascii	"nrf_nvmc_write_byte\000"
+ 1484      6E766D63 
+ 1484      5F777269 
+ 1484      74655F62 
+ 1484      79746500 
+ 1485              	.LASF5:
+ 1486 003d 5F5F696E 		.ascii	"__int32_t\000"
+ 1486      7433325F 
+ 1486      7400
+ 1487              	.LASF11:
+ 1488 0047 756E7369 		.ascii	"unsigned int\000"
+ 1488      676E6564 
+ 1488      20696E74 
+ 1488      00
+ 1489              	.LASF34:
+ 1490 0054 6E756D5F 		.ascii	"num_words\000"
+ 1490      776F7264 
+ 1490      7300
+ 1491              	.LASF20:
+ 1492 005e 52455345 		.ascii	"RESERVED0\000"
+ 1492      52564544 
+ 1492      3000
+ 1493              	.LASF22:
+ 1494 0068 52455345 		.ascii	"RESERVED1\000"
+ 1494      52564544 
+ 1494      3100
+ 1495              	.LASF27:
+ 1496 0072 52455345 		.ascii	"RESERVED2\000"
+ 1496      52564544 
+ 1496      3200
+ 1497              	.LASF29:
+ 1498 007c 52455345 		.ascii	"RESERVED3\000"
+ 1498      52564544 
+ 1498      3300
+ 1499              	.LASF46:
+ 1500 0086 2F557365 		.ascii	"/Users/lukashann/Documents/Imperial College London/"
+ 1500      72732F6C 
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 30
+
+
+ 1500      756B6173 
+ 1500      68616E6E 
+ 1500      2F446F63 
+ 1501 00b9 59656172 		.ascii	"Year 3/Project/fNIRS-Musketeers/nrf52/blinky\000"
+ 1501      20332F50 
+ 1501      726F6A65 
+ 1501      63742F66 
+ 1501      4E495253 
+ 1502              	.LASF45:
+ 1503 00e6 2E2E2F73 		.ascii	"../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_n"
+ 1503      646B2F6E 
+ 1503      5246355F 
+ 1503      53444B5F 
+ 1503      31322E32 
+ 1504 0119 72662F68 		.ascii	"rf/hal/nrf_nvmc.c\000"
+ 1504      616C2F6E 
+ 1504      72665F6E 
+ 1504      766D632E 
+ 1504      6300
+ 1505              	.LASF1:
+ 1506 012b 756E7369 		.ascii	"unsigned char\000"
+ 1506      676E6564 
+ 1506      20636861 
+ 1506      7200
+ 1507              	.LASF44:
+ 1508 0139 474E5520 		.ascii	"GNU C11 6.2.1 20161205 (release) [ARM/embedded-6-br"
+ 1508      43313120 
+ 1508      362E322E 
+ 1508      31203230 
+ 1508      31363132 
+ 1509 016c 616E6368 		.ascii	"anch revision 243739] -mcpu=cortex-m4 -mthumb -gdwa"
+ 1509      20726576 
+ 1509      6973696F 
+ 1509      6E203234 
+ 1509      33373339 
+ 1510 019f 72662D32 		.ascii	"rf-2 -Os -fomit-frame-pointer\000"
+ 1510      202D4F73 
+ 1510      202D666F 
+ 1510      6D69742D 
+ 1510      6672616D 
+ 1511              	.LASF8:
+ 1512 01bd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1512      20756E73 
+ 1512      69676E65 
+ 1512      6420696E 
+ 1512      7400
+ 1513              	.LASF3:
+ 1514 01cf 73686F72 		.ascii	"short unsigned int\000"
+ 1514      7420756E 
+ 1514      7369676E 
+ 1514      65642069 
+ 1514      6E7400
+ 1515              	.LASF7:
+ 1516 01e2 5F5F7569 		.ascii	"__uint32_t\000"
+ 1516      6E743332 
+ 1516      5F7400
+ 1517              	.LASF24:
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 31
+
+
+ 1518 01ed 45524153 		.ascii	"ERASEALL\000"
+ 1518      45414C4C 
+ 1518      00
+ 1519              	.LASF19:
+ 1520 01f6 45524153 		.ascii	"ERASEPAGE\000"
+ 1520      45504147 
+ 1520      4500
+ 1521              	.LASF37:
+ 1522 0200 6E756D5F 		.ascii	"num_bytes\000"
+ 1522      62797465 
+ 1522      7300
+ 1523              	.LASF35:
+ 1524 020a 6E72665F 		.ascii	"nrf_nvmc_write_words\000"
+ 1524      6E766D63 
+ 1524      5F777269 
+ 1524      74655F77 
+ 1524      6F726473 
+ 1525              	.LASF23:
+ 1526 021f 434F4E46 		.ascii	"CONFIG\000"
+ 1526      494700
+ 1527              	.LASF16:
+ 1528 0226 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1528      52784275 
+ 1528      66666572 
+ 1528      00
+ 1529              	.LASF42:
+ 1530 0233 61646472 		.ascii	"address32\000"
+ 1530      65737333 
+ 1530      3200
+ 1531              	.LASF33:
+ 1532 023d 61646472 		.ascii	"address\000"
+ 1532      65737300 
+ 1533              	.LASF10:
+ 1534 0245 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1534      206C6F6E 
+ 1534      6720756E 
+ 1534      7369676E 
+ 1534      65642069 
+ 1535              	.LASF12:
+ 1536 025c 75696E74 		.ascii	"uint8_t\000"
+ 1536      385F7400 
+ 1537              	.LASF28:
+ 1538 0264 49434143 		.ascii	"ICACHECNF\000"
+ 1538      4845434E 
+ 1538      4600
+ 1539              	.LASF26:
+ 1540 026e 45524153 		.ascii	"ERASEUICR\000"
+ 1540      45554943 
+ 1540      5200
+ 1541              	.LASF21:
+ 1542 0278 52454144 		.ascii	"READY\000"
+ 1542      5900
+ 1543              	.LASF13:
+ 1544 027e 696E7433 		.ascii	"int32_t\000"
+ 1544      325F7400 
+ 1545              	.LASF15:
+ 1546 0286 73697A65 		.ascii	"sizetype\000"
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 32
+
+
+ 1546      74797065 
+ 1546      00
+ 1547              	.LASF43:
+ 1548 028f 76616C75 		.ascii	"value32\000"
+ 1548      65333200 
+ 1549              	.LASF9:
+ 1550 0297 6C6F6E67 		.ascii	"long long int\000"
+ 1550      206C6F6E 
+ 1550      6720696E 
+ 1550      7400
+ 1551              	.LASF36:
+ 1552 02a5 6E72665F 		.ascii	"nrf_nvmc_write_bytes\000"
+ 1552      6E766D63 
+ 1552      5F777269 
+ 1552      74655F62 
+ 1552      79746573 
+ 1553              	.LASF17:
+ 1554 02ba 53797374 		.ascii	"SystemCoreClock\000"
+ 1554      656D436F 
+ 1554      7265436C 
+ 1554      6F636B00 
+ 1555              	.LASF32:
+ 1556 02ca 4E52465F 		.ascii	"NRF_NVMC_Type\000"
+ 1556      4E564D43 
+ 1556      5F547970 
+ 1556      6500
+ 1557              	.LASF31:
+ 1558 02d8 494D4953 		.ascii	"IMISS\000"
+ 1558      5300
+ 1559              	.LASF2:
+ 1560 02de 73686F72 		.ascii	"short int\000"
+ 1560      7420696E 
+ 1560      7400
+ 1561              	.LASF25:
+ 1562 02e8 45524153 		.ascii	"ERASEPCR0\000"
+ 1562      45504352 
+ 1562      3000
+ 1563              	.LASF18:
+ 1564 02f2 45524153 		.ascii	"ERASEPCR1\000"
+ 1564      45504352 
+ 1564      3100
+ 1565              	.LASF47:
+ 1566 02fc 6E72665F 		.ascii	"nrf_nvmc_page_erase\000"
+ 1566      6E766D63 
+ 1566      5F706167 
+ 1566      655F6572 
+ 1566      61736500 
+ 1567              	.LASF14:
+ 1568 0310 75696E74 		.ascii	"uint32_t\000"
+ 1568      33325F74 
+ 1568      00
+ 1569              	.LASF6:
+ 1570 0319 6C6F6E67 		.ascii	"long int\000"
+ 1570      20696E74 
+ 1570      00
+ 1571              	.LASF0:
+ 1572 0322 7369676E 		.ascii	"signed char\000"
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 33
+
+
+ 1572      65642063 
+ 1572      68617200 
+ 1573              	.LASF41:
+ 1574 032e 62797465 		.ascii	"byte_shift\000"
+ 1574      5F736869 
+ 1574      667400
+ 1575              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 6.2.1 20161205 (release) [ARM/embedded-6-bran
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s 			page 34
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 nrf_nvmc.c
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:87     .text:0000000000000000 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:94     .text:0000000000000000 nrf_nvmc_page_erase
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:134    .text:0000000000000030 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:138    .text:0000000000000034 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:145    .text:0000000000000034 nrf_nvmc_write_byte
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:199    .text:0000000000000074 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:203    .text:0000000000000078 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:210    .text:0000000000000078 nrf_nvmc_write_word
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:249    .text:00000000000000a4 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:253    .text:00000000000000a8 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:260    .text:00000000000000a8 nrf_nvmc_write_bytes
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:304    .text:00000000000000c2 nrf_nvmc_write_words
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccf5XIzu.s:359    .text:0000000000000104 $d
+                     .debug_frame:0000000000000010 $d
+
+NO UNDEFINED SYMBOLS

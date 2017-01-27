@@ -1,0 +1,287 @@
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   3              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   4              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   5              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   6              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   7              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+   8              		.eabi_attribute 30, 4	@ Tag_ABI_optimization_goals
+   9              		.eabi_attribute 34, 1	@ Tag_CPU_unaligned_access
+  10              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  11              		.file	"main.c"
+  12              	@ GNU C11 (GNU Tools for ARM Embedded Processors) version 6.2.1 20161205 (release) [ARM/embedded-6-
+  13              	@	compiled by GNU C version 5.4.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl ve
+  14              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  15              	@ options passed:  -I . -I include/ -I cfg/
+  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
+  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
+  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
+  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
+  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
+  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
+  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  23              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd
+  24              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal
+  25              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common
+  26              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util
+  27              	@ -imultilib thumb/v7e-m
+  28              	@ -iprefix /Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf52
+  29              	@ -isysroot /Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf5
+  30              	@ -MD src/main.d -MF .depmain.o.d -MP -MQ src/main.o -D__USES_INITFINI__
+  31              	@ -D NRF52 src/main.c -mcpu=cortex-m4 -mthumb -auxbase-strip src/main.o
+  32              	@ -gdwarf-2 -Os -Wall -Wstrict-prototypes -fomit-frame-pointer
+  33              	@ -fverbose-asm
+  34              	@ options enabled:  -faggressive-loop-optimizations -falign-jumps
+  35              	@ -falign-labels -falign-loops -fauto-inc-dec -fbranch-count-reg
+  36              	@ -fcaller-saves -fchkp-check-incomplete-type -fchkp-check-read
+  37              	@ -fchkp-check-write -fchkp-instrument-calls -fchkp-narrow-bounds
+  38              	@ -fchkp-optimize -fchkp-store-bounds -fchkp-use-static-bounds
+  39              	@ -fchkp-use-static-const-bounds -fchkp-use-wrappers
+  40              	@ -fcombine-stack-adjustments -fcommon -fcompare-elim -fcprop-registers
+  41              	@ -fcrossjumping -fcse-follow-jumps -fdefer-pop
+  42              	@ -fdelete-null-pointer-checks -fdevirtualize -fdevirtualize-speculatively
+  43              	@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
+  44              	@ -fexpensive-optimizations -fforward-propagate -ffunction-cse -fgcse
+  45              	@ -fgcse-lm -fgnu-runtime -fgnu-unique -fguess-branch-probability
+  46              	@ -fhoist-adjacent-loads -fident -fif-conversion -fif-conversion2
+  47              	@ -findirect-inlining -finline -finline-atomics -finline-functions
+  48              	@ -finline-functions-called-once -finline-small-functions -fipa-cp
+  49              	@ -fipa-cp-alignment -fipa-icf -fipa-icf-functions -fipa-icf-variables
+  50              	@ -fipa-profile -fipa-pure-const -fipa-ra -fipa-reference -fipa-sra
+  51              	@ -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
+  52              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
+  53              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
+  54              	@ -fmath-errno -fmerge-constants -fmerge-debug-strings
+  55              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
+  56              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
+  57              	@ -freg-struct-return -freorder-blocks -freorder-functions
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 2
+
+
+  58              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+  59              	@ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  60              	@ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
+  61              	@ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  62              	@ -fschedule-insns2 -fsection-anchors -fsemantic-interposition
+  63              	@ -fshow-column -fsigned-zeros -fsplit-ivs-in-unroller -fsplit-wide-types
+  64              	@ -fssa-backprop -fssa-phiopt -fstdarg-opt -fstrict-aliasing
+  65              	@ -fstrict-overflow -fstrict-volatile-bitfields -fsync-libcalls
+  66              	@ -fthread-jumps -ftoplevel-reorder -ftrapping-math -ftree-bit-ccp
+  67              	@ -ftree-builtin-call-dce -ftree-ccp -ftree-ch -ftree-coalesce-vars
+  68              	@ -ftree-copy-prop -ftree-cselim -ftree-dce -ftree-dominator-opts
+  69              	@ -ftree-dse -ftree-forwprop -ftree-fre -ftree-loop-if-convert
+  70              	@ -ftree-loop-im -ftree-loop-ivcanon -ftree-loop-optimize
+  71              	@ -ftree-parallelize-loops= -ftree-phiprop -ftree-pre -ftree-pta
+  72              	@ -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slsr -ftree-sra
+  73              	@ -ftree-switch-conversion -ftree-tail-merge -ftree-ter -ftree-vrp
+  74              	@ -funit-at-a-time -fvar-tracking -fvar-tracking-assignments -fverbose-asm
+  75              	@ -fzero-initialized-in-bss -masm-syntax-unified -mlittle-endian
+  76              	@ -mpic-data-is-text-relative -msched-prolog -mthumb -munaligned-access
+  77              	@ -mvectorize-with-neon-quad
+  78              	
+  79              		.text
+  80              	.Ltext0:
+  81              		.cfi_sections	.debug_frame
+  82              		.section	.text.startup,"ax",%progbits
+  83              		.align	1
+  84              		.global	main
+  85              		.syntax unified
+  86              		.thumb
+  87              		.thumb_func
+  88              		.fpu softvfp
+  89              		.type	main, %function
+  90              	main:
+  91              	.LFB0:
+  92              		.file 1 "src/main.c"
+   1:src/main.c    **** int main(void)
+   2:src/main.c    **** {
+  93              		.loc 1 2 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		@ link register save eliminated.
+   3:src/main.c    **** 	return 0;
+   4:src/main.c    **** }...
+  98              		.loc 1 4 0
+  99 0000 0020     		movs	r0, #0	@,
+ 100 0002 7047     		bx	lr	@
+ 101              		.cfi_endproc
+ 102              	.LFE0:
+ 103              		.size	main, .-main
+ 104              		.text
+ 105              	.Letext0:
+ 106              		.section	.debug_info,"",%progbits
+ 107              	.Ldebug_info0:
+ 108 0000 46000000 		.4byte	0x46
+ 109 0004 0200     		.2byte	0x2
+ 110 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 3
+
+
+ 111 000a 04       		.byte	0x4
+ 112 000b 01       		.uleb128 0x1
+ 113 000c 00000000 		.4byte	.LASF0
+ 114 0010 0C       		.byte	0xc
+ 115 0011 E4000000 		.4byte	.LASF1
+ 116 0015 84000000 		.4byte	.LASF2
+ 117 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 118 001d 00000000 		.4byte	0
+ 119 0021 00000000 		.4byte	0
+ 120 0025 00000000 		.4byte	.Ldebug_line0
+ 121 0029 02       		.uleb128 0x2
+ 122 002a 01       		.byte	0x1
+ 123 002b EF000000 		.4byte	.LASF3
+ 124 002f 01       		.byte	0x1
+ 125 0030 01       		.byte	0x1
+ 126 0031 01       		.byte	0x1
+ 127 0032 42000000 		.4byte	0x42
+ 128 0036 00000000 		.4byte	.LFB0
+ 129 003a 04000000 		.4byte	.LFE0
+ 130 003e 02       		.byte	0x2
+ 131 003f 7D       		.byte	0x7d
+ 132 0040 00       		.sleb128 0
+ 133 0041 01       		.byte	0x1
+ 134 0042 03       		.uleb128 0x3
+ 135 0043 04       		.byte	0x4
+ 136 0044 05       		.byte	0x5
+ 137 0045 696E7400 		.ascii	"int\000"
+ 138 0049 00       		.byte	0
+ 139              		.section	.debug_abbrev,"",%progbits
+ 140              	.Ldebug_abbrev0:
+ 141 0000 01       		.uleb128 0x1
+ 142 0001 11       		.uleb128 0x11
+ 143 0002 01       		.byte	0x1
+ 144 0003 25       		.uleb128 0x25
+ 145 0004 0E       		.uleb128 0xe
+ 146 0005 13       		.uleb128 0x13
+ 147 0006 0B       		.uleb128 0xb
+ 148 0007 03       		.uleb128 0x3
+ 149 0008 0E       		.uleb128 0xe
+ 150 0009 1B       		.uleb128 0x1b
+ 151 000a 0E       		.uleb128 0xe
+ 152 000b 55       		.uleb128 0x55
+ 153 000c 06       		.uleb128 0x6
+ 154 000d 11       		.uleb128 0x11
+ 155 000e 01       		.uleb128 0x1
+ 156 000f 52       		.uleb128 0x52
+ 157 0010 01       		.uleb128 0x1
+ 158 0011 10       		.uleb128 0x10
+ 159 0012 06       		.uleb128 0x6
+ 160 0013 00       		.byte	0
+ 161 0014 00       		.byte	0
+ 162 0015 02       		.uleb128 0x2
+ 163 0016 2E       		.uleb128 0x2e
+ 164 0017 00       		.byte	0
+ 165 0018 3F       		.uleb128 0x3f
+ 166 0019 0C       		.uleb128 0xc
+ 167 001a 03       		.uleb128 0x3
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 4
+
+
+ 168 001b 0E       		.uleb128 0xe
+ 169 001c 3A       		.uleb128 0x3a
+ 170 001d 0B       		.uleb128 0xb
+ 171 001e 3B       		.uleb128 0x3b
+ 172 001f 0B       		.uleb128 0xb
+ 173 0020 27       		.uleb128 0x27
+ 174 0021 0C       		.uleb128 0xc
+ 175 0022 49       		.uleb128 0x49
+ 176 0023 13       		.uleb128 0x13
+ 177 0024 11       		.uleb128 0x11
+ 178 0025 01       		.uleb128 0x1
+ 179 0026 12       		.uleb128 0x12
+ 180 0027 01       		.uleb128 0x1
+ 181 0028 40       		.uleb128 0x40
+ 182 0029 0A       		.uleb128 0xa
+ 183 002a 9742     		.uleb128 0x2117
+ 184 002c 0C       		.uleb128 0xc
+ 185 002d 00       		.byte	0
+ 186 002e 00       		.byte	0
+ 187 002f 03       		.uleb128 0x3
+ 188 0030 24       		.uleb128 0x24
+ 189 0031 00       		.byte	0
+ 190 0032 0B       		.uleb128 0xb
+ 191 0033 0B       		.uleb128 0xb
+ 192 0034 3E       		.uleb128 0x3e
+ 193 0035 0B       		.uleb128 0xb
+ 194 0036 03       		.uleb128 0x3
+ 195 0037 08       		.uleb128 0x8
+ 196 0038 00       		.byte	0
+ 197 0039 00       		.byte	0
+ 198 003a 00       		.byte	0
+ 199              		.section	.debug_aranges,"",%progbits
+ 200 0000 1C000000 		.4byte	0x1c
+ 201 0004 0200     		.2byte	0x2
+ 202 0006 00000000 		.4byte	.Ldebug_info0
+ 203 000a 04       		.byte	0x4
+ 204 000b 00       		.byte	0
+ 205 000c 0000     		.2byte	0
+ 206 000e 0000     		.2byte	0
+ 207 0010 00000000 		.4byte	.LFB0
+ 208 0014 04000000 		.4byte	.LFE0-.LFB0
+ 209 0018 00000000 		.4byte	0
+ 210 001c 00000000 		.4byte	0
+ 211              		.section	.debug_ranges,"",%progbits
+ 212              	.Ldebug_ranges0:
+ 213 0000 00000000 		.4byte	.LFB0
+ 214 0004 04000000 		.4byte	.LFE0
+ 215 0008 00000000 		.4byte	0
+ 216 000c 00000000 		.4byte	0
+ 217              		.section	.debug_line,"",%progbits
+ 218              	.Ldebug_line0:
+ 219 0000 35000000 		.section	.debug_str,"MS",%progbits,1
+ 219      02002100 
+ 219      00000201 
+ 219      FB0E0D00 
+ 219      01010101 
+ 220              	.LASF0:
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 5
+
+
+ 221 0000 474E5520 		.ascii	"GNU C11 6.2.1 20161205 (release) [ARM/embedded-6-br"
+ 221      43313120 
+ 221      362E322E 
+ 221      31203230 
+ 221      31363132 
+ 222 0033 616E6368 		.ascii	"anch revision 243739] -mcpu=cortex-m4 -mthumb -gdwa"
+ 222      20726576 
+ 222      6973696F 
+ 222      6E203234 
+ 222      33373339 
+ 223 0066 72662D32 		.ascii	"rf-2 -Os -fomit-frame-pointer\000"
+ 223      202D4F73 
+ 223      202D666F 
+ 223      6D69742D 
+ 223      6672616D 
+ 224              	.LASF2:
+ 225 0084 2F557365 		.ascii	"/Users/lukashann/Documents/Imperial College London/"
+ 225      72732F6C 
+ 225      756B6173 
+ 225      68616E6E 
+ 225      2F446F63 
+ 226 00b7 59656172 		.ascii	"Year 3/Project/fNIRS-Musketeers/nrf52/blinky\000"
+ 226      20332F50 
+ 226      726F6A65 
+ 226      63742F66 
+ 226      4E495253 
+ 227              	.LASF1:
+ 228 00e4 7372632F 		.ascii	"src/main.c\000"
+ 228      6D61696E 
+ 228      2E6300
+ 229              	.LASF3:
+ 230 00ef 6D61696E 		.ascii	"main\000"
+ 230      00
+ 231              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 6.2.1 20161205 (release) [ARM/embedded-6-bran
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 main.c
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s:83     .text.startup:0000000000000000 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s:90     .text.startup:0000000000000000 main
+                     .debug_frame:0000000000000010 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,505 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x0000000000004000 xrw
+FLASH            0x0000000000000000 0x0000000000040000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD src/main.o
+LOAD ../startup/startup.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+LOAD ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+LOAD /Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf52/toolchain/arm_cm4/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc.a
+START GROUP
+LOAD /Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf52/toolchain/arm_cm4/bin/../lib/gcc/arm-none-eabi/6.2.1/thumb/v7e-m/libgcc.a
+LOAD /Users/lukashann/Documents/Imperial College London/Year 3/Project/fNIRS-Musketeers/nrf52/toolchain/arm_cm4/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/libc.a
+END GROUP
+                0x0000000020004000                _end_of_stack = 0x20004000
+                0x0000000000000800                _stack_size = 0x800
+                0x0000000000000800                _heap_size = 0x800
+
+.isr_vector     0x0000000000000000       0xc0
+ *(.isr_vector)
+ .isr_vector    0x0000000000000000       0xc0 ../startup/startup.o
+                0x0000000000000000                g_pfnVectors
+                0x00000000000000c0                . = ALIGN (0x4)
+
+.text           0x00000000000000c0      0x75c
+                0x00000000000000c0                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000000000000c0        0x0 src/main.o
+ .text          0x00000000000000c0       0x40 ../startup/startup.o
+                0x00000000000000c0                SWI1_IRQHandler
+                0x00000000000000c0                SPI0_TWI0_IRQHandler
+                0x00000000000000c0                RTC0_IRQHandler
+                0x00000000000000c0                HardFault_Handler
+                0x00000000000000c0                SysTick_Handler
+                0x00000000000000c0                GPIOTE_IRQHandler
+                0x00000000000000c0                PendSV_Handler
+                0x00000000000000c0                NMI_Handler
+                0x00000000000000c0                POWER_CLOCK_IRQHandler
+                0x00000000000000c0                RADIO_IRQHandler
+                0x00000000000000c0                LPCOMP_IRQHandler
+                0x00000000000000c0                SWI4_IRQHandler
+                0x00000000000000c0                TEMP_IRQHandler
+                0x00000000000000c0                QDEC_IRQHandler
+                0x00000000000000c0                UART0_IRQHandler
+                0x00000000000000c0                default_irq
+                0x00000000000000c0                SWI5_IRQHandler
+                0x00000000000000c0                TIMER0_IRQHandler
+                0x00000000000000c0                TIMER2_IRQHandler
+                0x00000000000000c0                SWI0_IRQHandler
+                0x00000000000000c0                TIMER1_IRQHandler
+                0x00000000000000c0                ECB_IRQHandler
+                0x00000000000000c0                ADC_IRQHandler
+                0x00000000000000c0                SWI3_IRQHandler
+                0x00000000000000c0                CCM_AAR_IRQHandler
+                0x00000000000000c0                WDT_IRQHandler
+                0x00000000000000c0                SVC_Handler
+                0x00000000000000c0                SWI2_IRQHandler
+                0x00000000000000c0                RNG_IRQHandler
+                0x00000000000000c0                SPI1_TWI1_IRQHandler
+                0x00000000000000c0                RTC1_IRQHandler
+                0x00000000000000c2                Reset_Handler
+ .text          0x0000000000000100      0x1f4 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+                0x0000000000000174                SystemCoreClockUpdate
+                0x0000000000000184                SystemInit
+ .text          0x00000000000002f4      0x148 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+                0x00000000000002f4                sd_nvic_EnableIRQ
+                0x0000000000000310                sd_nvic_DisableIRQ
+                0x000000000000032c                sd_nvic_GetPendingIRQ
+                0x0000000000000354                sd_nvic_SetPendingIRQ
+                0x0000000000000370                sd_nvic_ClearPendingIRQ
+                0x000000000000038c                sd_nvic_SetPriority
+                0x00000000000003b8                sd_nvic_GetPriority
+                0x00000000000003e4                sd_nvic_SystemReset
+                0x0000000000000408                sd_nvic_critical_region_enter
+                0x0000000000000424                sd_nvic_critical_region_exit
+ .text          0x000000000000043c        0x6 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+                0x000000000000043c                sd_app_evt_wait
+ .text          0x0000000000000442        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ *fill*         0x0000000000000442        0x2 
+ .text          0x0000000000000444       0xa0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+                0x0000000000000444                nrf_ecb_init
+                0x0000000000000468                nrf_ecb_crypt
+                0x00000000000004c8                nrf_ecb_set_key
+ .text          0x00000000000004e4      0x108 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+                0x00000000000004e4                nrf_nvmc_page_erase
+                0x0000000000000518                nrf_nvmc_write_byte
+                0x000000000000055c                nrf_nvmc_write_word
+                0x000000000000058c                nrf_nvmc_write_bytes
+                0x00000000000005a6                nrf_nvmc_write_words
+ .text          0x00000000000005ec        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+ .text          0x00000000000005ec       0x5c ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+                0x00000000000005ec                nrf_drv_common_clock_irq_disable
+                0x00000000000005fc                nrf_drv_common_irq_enable
+ .text          0x0000000000000648       0x90 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+                0x0000000000000648                app_error_handler
+                0x0000000000000664                app_error_handler_bare
+                0x0000000000000680                app_error_save_and_stop
+ .text          0x00000000000006d8       0x24 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+                0x00000000000006d8                app_error_fault_handler
+ .text          0x00000000000006fc       0x2c ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+                0x00000000000006fc                app_util_disable_irq
+                0x000000000000070c                app_util_enable_irq
+                0x0000000000000720                app_util_critical_region_enter
+                0x0000000000000724                app_util_critical_region_exit
+ .text          0x0000000000000728       0x1a ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+                0x0000000000000728                assert_nrf_callback
+ .text          0x0000000000000742        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .text          0x0000000000000742       0xd6 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+                0x0000000000000742                sdk_mapped_flags_first_key_index_get
+                0x000000000000075c                sdk_mapped_flags_bulk_update_by_key
+                0x000000000000079c                sdk_mapped_flags_update_by_key
+                0x00000000000007ae                sdk_mapped_flags_get_by_key
+                0x00000000000007d0                sdk_mapped_flags_key_list_get
+                0x00000000000007fe                sdk_mapped_flags_n_flags_set
+ *(.text*)
+ .text.startup  0x0000000000000818        0x4 src/main.o
+                0x0000000000000818                main
+ *(.rodata)
+ *(.rodata*)
+                0x000000000000081c                . = ALIGN (0x4)
+                0x000000000000081c                _etext = .
+
+.glue_7         0x000000000000081c        0x0
+ .glue_7        0x000000000000081c        0x0 linker stubs
+
+.glue_7t        0x000000000000081c        0x0
+ .glue_7t       0x000000000000081c        0x0 linker stubs
+
+.vfp11_veneer   0x000000000000081c        0x0
+ .vfp11_veneer  0x000000000000081c        0x0 linker stubs
+
+.v4_bx          0x000000000000081c        0x0
+ .v4_bx         0x000000000000081c        0x0 linker stubs
+
+.iplt           0x000000000000081c        0x0
+ .iplt          0x000000000000081c        0x0 src/main.o
+
+.rel.dyn        0x000000000000081c        0x0
+ .rel.iplt      0x000000000000081c        0x0 src/main.o
+
+.bss            0x0000000020000000       0x64
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sbss = .
+ *(.bss)
+ .bss           0x0000000020000000        0x0 src/main.o
+ .bss           0x0000000020000000        0x0 ../startup/startup.o
+ .bss           0x0000000020000000        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .bss           0x0000000020000000        0x1 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .bss           0x0000000020000001        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .bss           0x0000000020000001        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ *fill*         0x0000000020000001        0x3 
+ .bss           0x0000000020000004       0x3c ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .bss           0x0000000020000040        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .bss           0x0000000020000040        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+ .bss           0x0000000020000040        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .bss           0x0000000020000040       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .bss           0x0000000020000060        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .bss           0x0000000020000060        0x4 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .bss           0x0000000020000064        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .bss           0x0000000020000064        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .bss           0x0000000020000064        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+ *(.bss.*)
+ *(COMMON)
+                0x0000000020000064                . = ALIGN (0x4)
+                0x0000000020000064                _ebss = .
+
+.data           0x0000000020000064        0x4 load address 0x000000000000081c
+                0x0000000020000064                . = ALIGN (0x4)
+                0x0000000020000064                _sdata = .
+ *(.data)
+ .data          0x0000000020000064        0x0 src/main.o
+ .data          0x0000000020000064        0x0 ../startup/startup.o
+ .data          0x0000000020000064        0x4 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+                0x0000000020000064                SystemCoreClock
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .data          0x0000000020000068        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+ *(.data.*)
+                0x0000000020000068                . = ALIGN (0x4)
+                0x0000000020000068                _edata = .
+
+.igot.plt       0x0000000020000068        0x0 load address 0x0000000000000820
+ .igot.plt      0x0000000020000068        0x0 src/main.o
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+OUTPUT(blinky.elf elf32-littlearm)
+
+.debug_info     0x0000000000000000     0x7c07
+ .debug_info    0x0000000000000000       0x4a src/main.o
+ .debug_info    0x000000000000004a      0x118 ../startup/startup.o
+ .debug_info    0x0000000000000162      0xa68 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .debug_info    0x0000000000000bca     0x1234 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .debug_info    0x0000000000001dfe      0xa00 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .debug_info    0x00000000000027fe       0xbe ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ .debug_info    0x00000000000028bc      0xbe5 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .debug_info    0x00000000000034a1      0x3c0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .debug_info    0x0000000000003861      0xfb5 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .debug_info    0x0000000000004816      0xc81 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .debug_info    0x0000000000005497      0xc68 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .debug_info    0x00000000000060ff      0xade ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .debug_info    0x0000000000006bdd      0xa93 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .debug_info    0x0000000000007670       0x64 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .debug_info    0x00000000000076d4      0x533 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.debug_abbrev   0x0000000000000000     0x179b
+ .debug_abbrev  0x0000000000000000       0x3b src/main.o
+ .debug_abbrev  0x000000000000003b       0xe7 ../startup/startup.o
+ .debug_abbrev  0x0000000000000122      0x192 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .debug_abbrev  0x00000000000002b4      0x28c ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .debug_abbrev  0x0000000000000540      0x1b2 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .debug_abbrev  0x00000000000006f2       0x5c ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ .debug_abbrev  0x000000000000074e      0x211 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .debug_abbrev  0x000000000000095f      0x189 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .debug_abbrev  0x0000000000000ae8      0x26d ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .debug_abbrev  0x0000000000000d55      0x215 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .debug_abbrev  0x0000000000000f6a      0x1fb ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .debug_abbrev  0x0000000000001165      0x1f4 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .debug_abbrev  0x0000000000001359      0x1d9 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .debug_abbrev  0x0000000000001532       0x26 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .debug_abbrev  0x0000000000001558      0x243 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.debug_aranges  0x0000000000000000      0x1d0
+ .debug_aranges
+                0x0000000000000000       0x20 src/main.o
+ .debug_aranges
+                0x0000000000000020       0x20 ../startup/startup.o
+ .debug_aranges
+                0x0000000000000040       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .debug_aranges
+                0x0000000000000060       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .debug_aranges
+                0x0000000000000080       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .debug_aranges
+                0x00000000000000a0       0x18 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ .debug_aranges
+                0x00000000000000b8       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .debug_aranges
+                0x00000000000000d8       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .debug_aranges
+                0x00000000000000f8       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .debug_aranges
+                0x0000000000000118       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .debug_aranges
+                0x0000000000000138       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .debug_aranges
+                0x0000000000000158       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .debug_aranges
+                0x0000000000000178       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .debug_aranges
+                0x0000000000000198       0x18 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .debug_aranges
+                0x00000000000001b0       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.debug_ranges   0x0000000000000000       0x88
+ .debug_ranges  0x0000000000000000       0x10 src/main.o
+ .debug_ranges  0x0000000000000010       0x30 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .debug_ranges  0x0000000000000040       0x48 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.debug_line     0x0000000000000000     0x27a9
+ .debug_line    0x0000000000000000       0x39 src/main.o
+ .debug_line    0x0000000000000039       0x64 ../startup/startup.o
+ .debug_line    0x000000000000009d      0x29c ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .debug_line    0x0000000000000339      0x47b ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .debug_line    0x00000000000007b4      0x3a5 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .debug_line    0x0000000000000b59      0x1e2 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ .debug_line    0x0000000000000d3b      0x3d8 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .debug_line    0x0000000000001113      0x2e1 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .debug_line    0x00000000000013f4        0x0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+ .debug_line    0x00000000000013f4      0x3b6 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .debug_line    0x00000000000017aa      0x37c ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .debug_line    0x0000000000001b26      0x32f ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .debug_line    0x0000000000001e55      0x341 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .debug_line    0x0000000000002196      0x31c ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .debug_line    0x00000000000024b2       0x1d ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .debug_line    0x00000000000024cf      0x2da ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.debug_str      0x0000000000000000     0x1714
+ .debug_str     0x0000000000000000       0xf4 src/main.o
+ .debug_str     0x00000000000000f4       0x79 ../startup/startup.o
+                                        0x174 (size before relaxing)
+ .debug_str     0x000000000000016d      0x3c9 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+                                        0x4fb (size before relaxing)
+ .debug_str     0x0000000000000536      0x923 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+                                        0xb64 (size before relaxing)
+ .debug_str     0x0000000000000e59       0x63 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+                                        0x611 (size before relaxing)
+ .debug_str     0x0000000000000ebc       0x44 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+                                        0x204 (size before relaxing)
+ .debug_str     0x0000000000000f00      0x109 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+                                        0x6ff (size before relaxing)
+ .debug_str     0x0000000000001009      0x13e ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+                                        0x339 (size before relaxing)
+ .debug_str     0x0000000000001147       0x46 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+                                        0x12a (size before relaxing)
+ .debug_str     0x000000000000118d       0xc7 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+                                        0xa29 (size before relaxing)
+ .debug_str     0x0000000000001254      0x123 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+                                        0x736 (size before relaxing)
+ .debug_str     0x0000000000001377       0x4a ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+                                        0x6b6 (size before relaxing)
+ .debug_str     0x00000000000013c1       0xe8 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+                                        0x6e9 (size before relaxing)
+ .debug_str     0x00000000000014a9       0x5a ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+                                        0x675 (size before relaxing)
+ .debug_str     0x0000000000001503       0x46 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+                                        0x1ae (size before relaxing)
+ .debug_str     0x0000000000001549      0x1cb ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+                                        0x3ed (size before relaxing)
+
+.comment        0x0000000000000000       0x6e
+ .comment       0x0000000000000000       0x6e src/main.o
+                                         0x6f (size before relaxing)
+ .comment       0x000000000000006e       0x6f ../startup/startup.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .comment       0x000000000000006e       0x6f ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.ARM.attributes
+                0x0000000000000000       0x33
+ .ARM.attributes
+                0x0000000000000000       0x33 src/main.o
+ .ARM.attributes
+                0x0000000000000033       0x33 ../startup/startup.o
+ .ARM.attributes
+                0x0000000000000066       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .ARM.attributes
+                0x0000000000000099       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .ARM.attributes
+                0x00000000000000cc       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .ARM.attributes
+                0x00000000000000ff       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_adc.o
+ .ARM.attributes
+                0x0000000000000132       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .ARM.attributes
+                0x0000000000000165       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .ARM.attributes
+                0x0000000000000198       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_saadc.o
+ .ARM.attributes
+                0x00000000000001cb       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .ARM.attributes
+                0x00000000000001fe       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .ARM.attributes
+                0x0000000000000231       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .ARM.attributes
+                0x0000000000000264       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .ARM.attributes
+                0x0000000000000297       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .ARM.attributes
+                0x00000000000002ca       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_errors.o
+ .ARM.attributes
+                0x00000000000002fd       0x33 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.debug_frame    0x0000000000000000      0x428
+ .debug_frame   0x0000000000000000       0x20 src/main.o
+ .debug_frame   0x0000000000000020       0x30 ../startup/startup.o
+ .debug_frame   0x0000000000000050       0x5c ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .debug_frame   0x00000000000000ac       0xb0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .debug_frame   0x000000000000015c       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+ .debug_frame   0x000000000000017c       0x4c ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .debug_frame   0x00000000000001c8       0x88 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .debug_frame   0x0000000000000250       0x30 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .debug_frame   0x0000000000000280       0x64 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .debug_frame   0x00000000000002e4       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .debug_frame   0x0000000000000304       0x50 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+ .debug_frame   0x0000000000000354       0x2c ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .debug_frame   0x0000000000000380       0xa8 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+.debug_loc      0x0000000000000000      0xcd4
+ .debug_loc     0x0000000000000000       0x43 ../startup/startup.o
+ .debug_loc     0x0000000000000043       0x20 ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+ .debug_loc     0x0000000000000063      0x28f ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+ .debug_loc     0x00000000000002f2       0xe1 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+ .debug_loc     0x00000000000003d3      0x215 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+ .debug_loc     0x00000000000005e8       0x92 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+ .debug_loc     0x000000000000067a      0x1c0 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+ .debug_loc     0x000000000000083a       0x42 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+ .debug_loc     0x000000000000087c       0x86 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+ .debug_loc     0x0000000000000902      0x3d2 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+
+Cross Reference Table
+
+Symbol                                            File
+ADC_IRQHandler                                    ../startup/startup.o
+CCM_AAR_IRQHandler                                ../startup/startup.o
+ECB_IRQHandler                                    ../startup/startup.o
+GPIOTE_IRQHandler                                 ../startup/startup.o
+HardFault_Handler                                 ../startup/startup.o
+LPCOMP_IRQHandler                                 ../startup/startup.o
+NMI_Handler                                       ../startup/startup.o
+POWER_CLOCK_IRQHandler                            ../startup/startup.o
+PendSV_Handler                                    ../startup/startup.o
+QDEC_IRQHandler                                   ../startup/startup.o
+RADIO_IRQHandler                                  ../startup/startup.o
+RNG_IRQHandler                                    ../startup/startup.o
+RTC0_IRQHandler                                   ../startup/startup.o
+RTC1_IRQHandler                                   ../startup/startup.o
+Reset_Handler                                     ../startup/startup.o
+SPI0_TWI0_IRQHandler                              ../startup/startup.o
+SPI1_TWI1_IRQHandler                              ../startup/startup.o
+SVC_Handler                                       ../startup/startup.o
+SWI0_IRQHandler                                   ../startup/startup.o
+SWI1_IRQHandler                                   ../startup/startup.o
+SWI2_IRQHandler                                   ../startup/startup.o
+SWI3_IRQHandler                                   ../startup/startup.o
+SWI4_IRQHandler                                   ../startup/startup.o
+SWI5_IRQHandler                                   ../startup/startup.o
+SysTick_Handler                                   ../startup/startup.o
+SystemCoreClock                                   ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+SystemCoreClockUpdate                             ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+SystemInit                                        ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.o
+TEMP_IRQHandler                                   ../startup/startup.o
+TIMER0_IRQHandler                                 ../startup/startup.o
+TIMER1_IRQHandler                                 ../startup/startup.o
+TIMER2_IRQHandler                                 ../startup/startup.o
+UART0_IRQHandler                                  ../startup/startup.o
+WDT_IRQHandler                                    ../startup/startup.o
+_ebss                                             ../startup/startup.o
+_edata                                            ../startup/startup.o
+_end_of_stack                                     ../startup/startup.o
+_etext                                            ../startup/startup.o
+_sbss                                             ../startup/startup.o
+_sdata                                            ../startup/startup.o
+app_error_fault_handler                           ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error_weak.o
+                                                  ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+                                                  ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+app_error_handler                                 ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+app_error_handler_bare                            ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+app_error_save_and_stop                           ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_error.o
+app_util_critical_region_enter                    ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+app_util_critical_region_exit                     ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+app_util_disable_irq                              ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+app_util_enable_irq                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/app_util_platform.o
+assert_nrf_callback                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/nrf_assert.o
+default_irq                                       ../startup/startup.o
+g_pfnVectors                                      ../startup/startup.o
+main                                              src/main.o
+                                                  ../startup/startup.o
+nrf_drv_common_clock_irq_disable                  ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+nrf_drv_common_irq_enable                         ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common/nrf_drv_common.o
+nrf_ecb_crypt                                     ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+nrf_ecb_init                                      ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+nrf_ecb_set_key                                   ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_ecb.o
+nrf_nvmc_page_erase                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+nrf_nvmc_write_byte                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+nrf_nvmc_write_bytes                              ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+nrf_nvmc_write_word                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+nrf_nvmc_write_words                              ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal/nrf_nvmc.o
+sd_app_evt_wait                                   ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_soc.o
+sd_nvic_ClearPendingIRQ                           ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_DisableIRQ                                ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_EnableIRQ                                 ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_GetPendingIRQ                             ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_GetPriority                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_SetPendingIRQ                             ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_SetPriority                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_SystemReset                               ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_critical_region_enter                     ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sd_nvic_critical_region_exit                      ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd/nrf_nvic.o
+sdk_mapped_flags_bulk_update_by_key               ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+sdk_mapped_flags_first_key_index_get              ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+sdk_mapped_flags_get_by_key                       ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+sdk_mapped_flags_key_list_get                     ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+sdk_mapped_flags_n_flags_set                      ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
+sdk_mapped_flags_update_by_key                    ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/util/sdk_mapped_flags.o
