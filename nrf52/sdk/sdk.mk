@@ -5,6 +5,9 @@ INCLUDES  += $(SDK_DIRECTORY)/toolchain
 INCLUDES  += $(SDK_DIRECTORY)/toolchain/arm
 INCLUDES  += $(SDK_DIRECTORY)/toolchain/gcc
 INCLUDES  += $(SDK_DIRECTORY)/device
+INCLUDES  += $(SDK_DIRECTORY)/toolchain/cmsis/include
+INCLUDES  += $(SDK_DIRECTORY)/libraries/log
+INCLUDES  += $(SDK_DIRECTORY)/libraries/log/src
  
 SRC       += $(SDK_DIRECTORY)/toolchain/system_nrf52.c
  

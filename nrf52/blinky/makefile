@@ -22,9 +22,6 @@ SRC  += $(STARTUP_DIR)/startup.c
 # include directory
 INCLUDES = include/   
 INCLUDES += cfg/
-INCLUDES += ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
-INCLUDES += ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
-INCLUDES += ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
 
 # Drivers
 USE_DRV_NOSD := y

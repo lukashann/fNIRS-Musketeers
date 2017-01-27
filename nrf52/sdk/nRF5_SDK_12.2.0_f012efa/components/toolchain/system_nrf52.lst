@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -16,13 +16,13 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
   13              	@	compiled by GNU C version 5.4.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl ve
   14              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
   15              	@ options passed:  -I . -I include/ -I cfg/
-  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
-  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
-  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
-  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
-  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
-  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
-  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
+  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
+  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
+  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
+  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
+  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
   23              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd
   24              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal
   25              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
   55              	@ -fipa-profile -fipa-pure-const -fipa-ra -fipa-reference -fipa-sra
   56              	@ -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
   57              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 2
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 2
 
 
   58              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
   17:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****  *
   18:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
   19:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 3
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 3
 
 
   20:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
   74:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         *(volatile uint32_t *)0x4000053C = ((*(volatile uint32_t *)0x10000244) & 0x0000E000) >> 13;
   75:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****     }
   76:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c **** 
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 4
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 4
 
 
   77:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****     /* Workaround for Errata 32 "DIF: Debug session automatically enables TracePort pins" found at 
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  131:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         *(volatile uint32_t *)0x40000EE4 = *(volatile uint32_t *)0x10000258 & 0x0000004F;
  132:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****     }
  133:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****     
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 5
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 5
 
 
  134:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****     /* Enable the FPU if the compiler used floating point unit instructions. __FPU_USED is a MACRO 
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  188:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         NRF_CLOCK->TRACECONFIG |= CLOCK_TRACECONFIG_TRACEMUX_Parallel << CLOCK_TRACECONFIG_TRACEMUX
  189:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         NRF_P0->PIN_CNF[14] = (GPIO_PIN_CNF_DRIVE_H0H1 << GPIO_PIN_CNF_DRIVE_Pos) | (GPIO_PIN_CNF_I
  190:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         NRF_P0->PIN_CNF[15] = (GPIO_PIN_CNF_DRIVE_H0H1 << GPIO_PIN_CNF_DRIVE_Pos) | (GPIO_PIN_CNF_I
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 6
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 6
 
 
  191:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         NRF_P0->PIN_CNF[16] = (GPIO_PIN_CNF_DRIVE_H0H1 << GPIO_PIN_CNF_DRIVE_Pos) | (GPIO_PIN_CNF_I
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  245:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         if (((*(uint32_t *)0xF0000FE8) & 0x000000F0) == 0x40){
  246:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****             return true;
  247:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         }
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 7
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 7
 
 
  248:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         if (((*(uint32_t *)0xF0000FE8) & 0x000000F0) == 0x50){
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  276:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c **** }
  122              		.loc 1 276 0
  123 0024 7047     		bx	lr	@
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 8
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 8
 
 
  124              	.L6:
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  161 0046 1868     		ldr	r0, [r3]	@ _7, MEM[(uint32_t *)4026535912B]
  162 0048 00F0F003 		and	r3, r0, #240	@ tmp125, _7,
  163 004c 302B     		cmp	r3, #48	@ tmp125,
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 9
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 9
 
 
  164 004e 08D0     		beq	.L11	@,
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  204              		@ link register save eliminated.
   60:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c **** }
  205              		.loc 1 60 0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 10
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 10
 
 
  206 0074 014B     		ldr	r3, .L15	@ tmp110,
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  255              	.L19:
   79:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         CoreDebug->DEMCR &= ~CoreDebug_DEMCR_TRCENA_Msk;
  256              		.loc 1 79 0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 11
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 11
 
 
  257 00a4 FFF7ACFF 		bl	errata_32	@
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  300 00e8 0022     		movs	r2, #0	@ tmp173,
  301 00ea 9A60     		str	r2, [r3, #8]	@ tmp173, MEM[(volatile uint32_t *)1073763864B]
  103:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****     }
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 12
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 12
 
 
  302              		.loc 1 103 0
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  349 0126 4FF08052 		mov	r2, #268435456	@ tmp190,
  350 012a 314B     		ldr	r3, .L49+56	@ tmp191,
  351 012c D2F80414 		ldr	r1, [r2, #1028]	@ _33, MEM[(struct NRF_FICR_Type *)268435456B].TEMP.A0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 13
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 13
 
 
  352 0130 C3F82015 		str	r1, [r3, #1312]	@ _33, MEM[(struct NRF_TEMP_Type *)1073790976B].A0
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  392              		.loc 1 123 0
  393 019c D2F83C14 		ldr	r1, [r2, #1084]	@ _61, MEM[(struct NRF_FICR_Type *)268435456B].TEMP.T2
  394 01a0 C3F86815 		str	r1, [r3, #1384]	@ _61, MEM[(struct NRF_TEMP_Type *)1073790976B].T2
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 14
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 14
 
 
  124:../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/system_nrf52.c ****         NRF_TEMP->T4 = NRF_FICR->TEMP.T4;
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  447 0011 DD020000 		.4byte	.LASF84
  448 0015 00000000 		.4byte	.LASF85
  449 0019 00000000 		.4byte	.Ltext0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 15
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 15
 
 
  450 001d F4010000 		.4byte	.Letext0
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  504 0086 03       		.byte	0x3
  505 0087 2C       		.byte	0x2c
  506 0088 41000000 		.4byte	0x41
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 16
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 16
 
 
  507 008c 05       		.uleb128 0x5
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  561 010d 08       		.uleb128 0x8
  562 010e AB000000 		.4byte	0xab
  563 0112 04       		.byte	0x4
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 17
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 17
 
 
  564 0113 00       		.byte	0
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  618 017d 01       		.byte	0x1
  619 017e 0D       		.uleb128 0xd
  620 017f 7E000000 		.4byte	.LASF20
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 18
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 18
 
 
  621 0183 05       		.byte	0x5
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  675 01e0 F8010000 		.4byte	0x1f8
  676 01e4 02       		.byte	0x2
  677 01e5 23       		.byte	0x23
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 19
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 19
 
 
  678 01e6 14       		.uleb128 0x14
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  732 0245 413400   		.ascii	"A4\000"
  733 0248 06       		.byte	0x6
  734 0249 B6       		.byte	0xb6
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 20
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 20
 
 
  735 024a A6000000 		.4byte	0xa6
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  789 02a3 06       		.byte	0x6
  790 02a4 BD       		.byte	0xbd
  791 02a5 A6000000 		.4byte	0xa6
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 21
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 21
 
 
  792 02a9 02       		.byte	0x2
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  846 0301 0F       		.uleb128 0xf
  847 0302 C9010000 		.4byte	.LASF28
  848 0306 06       		.byte	0x6
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 22
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 22
 
 
  849 0307 C6       		.byte	0xc6
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  903 036b 23       		.byte	0x23
  904 036c 10       		.uleb128 0x10
  905 036d 0A       		.uleb128 0xa
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 23
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 23
 
 
  906 036e 85030000 		.4byte	.LASF35
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  960 03d5 A001     		.uleb128 0xa0
  961 03d7 0A       		.uleb128 0xa
  962 03d8 27020000 		.4byte	.LASF40
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 24
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 24
 
 
  963 03dc 06       		.byte	0x6
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1017 0447 00       		.byte	0
  1018 0448 07       		.uleb128 0x7
  1019 0449 A6000000 		.4byte	0xa6
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 25
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 25
 
 
  1020 044d 58040000 		.4byte	0x458
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1074 04cc 06       		.uleb128 0x6
  1075 04cd BC040000 		.4byte	0x4bc
  1076 04d1 05       		.uleb128 0x5
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 26
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 26
 
 
  1077 04d2 CC040000 		.4byte	0x4cc
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1131 053a 0A       		.uleb128 0xa
  1132 053b A1030000 		.4byte	.LASF53
  1133 053f 06       		.byte	0x6
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 27
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 27
 
 
  1134 0540 5502     		.2byte	0x255
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1188 05a9 46040000 		.4byte	.LASF38
  1189 05ad 06       		.byte	0x6
  1190 05ae 5C02     		.2byte	0x25c
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 28
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 28
 
 
  1191 05b0 D8060000 		.4byte	0x6d8
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1245 061d 06       		.byte	0x6
  1246 061e 6302     		.2byte	0x263
  1247 0620 A6000000 		.4byte	0xa6
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 29
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 29
 
 
  1248 0624 03       		.byte	0x3
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1302 068e 6A02     		.2byte	0x26a
  1303 0690 D1040000 		.4byte	0x4d1
  1304 0694 03       		.byte	0x3
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 30
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 30
 
 
  1305 0695 23       		.byte	0x23
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1359 070d 07070000 		.4byte	0x707
  1360 0711 05       		.uleb128 0x5
  1361 0712 07070000 		.4byte	0x707
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 31
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 31
 
 
  1362 0716 07       		.uleb128 0x7
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1416 0784 3C040000 		.4byte	.LASF36
  1417 0788 06       		.byte	0x6
  1418 0789 3005     		.2byte	0x530
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 32
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 32
 
 
  1419 078b 18090000 		.4byte	0x918
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1473 07f6 06       		.byte	0x6
  1474 07f7 3705     		.2byte	0x537
  1475 07f9 A1000000 		.4byte	0xa1
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 33
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 33
 
 
  1476 07fd 03       		.byte	0x3
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1530 0861 3E05     		.2byte	0x53e
  1531 0863 A1000000 		.4byte	0xa1
  1532 0867 03       		.byte	0x3
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 34
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 34
 
 
  1533 0868 23       		.byte	0x23
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1587 08cd A1000000 		.4byte	0xa1
  1588 08d1 03       		.byte	0x3
  1589 08d2 23       		.byte	0x23
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 35
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 35
 
 
  1590 08d3 E40A     		.uleb128 0x564
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1644 0944 7E010000 		.4byte	0x17e
  1645 0948 01       		.byte	0x1
  1646 0949 37       		.byte	0x37
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 36
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 36
 
 
  1647 094a 05       		.byte	0x5
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1701 09b7 01       		.byte	0x1
  1702 09b8 69090000 		.4byte	0x969
  1703 09bc 17       		.uleb128 0x17
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 37
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 37
 
 
  1704 09bd 7C010000 		.4byte	.LASF81
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1758 0a47 50090000 		.4byte	0x950
  1759 0a4b 00       		.byte	0
  1760 0a4c 1B       		.uleb128 0x1b
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 38
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 38
 
 
  1761 0a4d 01       		.byte	0x1
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1815 0025 3B       		.uleb128 0x3b
  1816 0026 0B       		.uleb128 0xb
  1817 0027 49       		.uleb128 0x49
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 39
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 39
 
 
  1818 0028 13       		.uleb128 0x13
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1872 005e 05       		.uleb128 0x5
  1873 005f 01       		.uleb128 0x1
  1874 0060 13       		.uleb128 0x13
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 40
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 40
 
 
  1875 0061 00       		.byte	0
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1929 0097 3B       		.uleb128 0x3b
  1930 0098 0B       		.uleb128 0xb
  1931 0099 49       		.uleb128 0x49
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 41
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 41
 
 
  1932 009a 13       		.uleb128 0x13
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  1986 00d0 05       		.uleb128 0x5
  1987 00d1 3A       		.uleb128 0x3a
  1988 00d2 0B       		.uleb128 0xb
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 42
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 42
 
 
  1989 00d3 3B       		.uleb128 0x3b
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2043 010a 0C       		.uleb128 0xc
  2044 010b 00       		.byte	0
  2045 010c 00       		.byte	0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 43
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 43
 
 
  2046 010d 15       		.uleb128 0x15
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2100 0143 3A       		.uleb128 0x3a
  2101 0144 0B       		.uleb128 0xb
  2102 0145 3B       		.uleb128 0x3b
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 44
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 44
 
 
  2103 0146 0B       		.uleb128 0xb
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2157 017f 00       		.byte	0
  2158 0180 00       		.byte	0
  2159 0181 1C       		.uleb128 0x1c
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 45
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 45
 
 
  2160 0182 2E       		.uleb128 0x2e
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2206      2F446F63 
  2207 0033 59656172 		.ascii	"Year 3/Project/fNIRS-Musketeers/nrf52/blinky\000"
  2207      20332F50 
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 46
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 46
 
 
  2207      726F6A65 
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2232              	.LASF24:
  2233 00ec 464C4153 		.ascii	"FLASH\000"
  2233      4800
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 47
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 47
 
 
  2234              	.LASF13:
@@ -2818,7 +2818,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2259      74615F33 
  2259      3100
  2260              	.LASF15:
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 48
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 48
 
 
  2261 0186 44435253 		.ascii	"DCRSR\000"
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2289 020f 436F7265 		.ascii	"CoreDebug_Type\000"
  2289      44656275 
  2289      675F5479 
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 49
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 49
 
 
  2289      706500
@@ -2938,7 +2938,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2315      325F7400 
  2316              	.LASF9:
  2317 02b0 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 50
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 50
 
 
  2317      206C6F6E 
@@ -2998,7 +2998,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2338      535F4341 
  2338      4C00
  2339              	.LASF75:
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 51
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 51
 
 
  2340 037f 5F426F6F 		.ascii	"_Bool\000"
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2362 0464 52455345 		.ascii	"RESERVED5\000"
  2362      52564544 
  2362      3500
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 52
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 52
 
 
  2363              	.LASF66:
@@ -3115,30 +3115,30 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 1
  2386      74615F31 
  2386      3600
  2387              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 6.2.1 20161205 (release) [ARM/embedded-6-bran
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s 			page 53
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s 			page 53
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_nrf52.c
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:87     .text:0000000000000000 $t
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:93     .text:0000000000000000 errata_57
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:127    .text:0000000000000028 $d
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:93     .text:0000000000000000 errata_16
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:93     .text:0000000000000000 errata_32
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:93     .text:0000000000000000 errata_37
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:136    .text:0000000000000034 $t
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:142    .text:0000000000000034 errata_108
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:183    .text:0000000000000068 $d
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:142    .text:0000000000000034 errata_31
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:142    .text:0000000000000034 errata_36
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:191    .text:0000000000000074 $t
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:198    .text:0000000000000074 SystemCoreClockUpdate
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:213    .text:000000000000007c $d
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:218    .text:0000000000000084 $t
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:225    .text:0000000000000084 SystemInit
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:405    .text:00000000000001b8 $d
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:429    .data:0000000000000000 SystemCoreClock
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cch1yTfr.s:425    .data:0000000000000000 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:87     .text:0000000000000000 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:93     .text:0000000000000000 errata_57
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:127    .text:0000000000000028 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:93     .text:0000000000000000 errata_16
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:93     .text:0000000000000000 errata_32
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:93     .text:0000000000000000 errata_37
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:136    .text:0000000000000034 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:142    .text:0000000000000034 errata_108
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:183    .text:0000000000000068 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:142    .text:0000000000000034 errata_31
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:142    .text:0000000000000034 errata_36
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:191    .text:0000000000000074 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:198    .text:0000000000000074 SystemCoreClockUpdate
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:213    .text:000000000000007c $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:218    .text:0000000000000084 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:225    .text:0000000000000084 SystemInit
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:405    .text:00000000000001b8 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:429    .data:0000000000000000 SystemCoreClock
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccDV2z7Q.s:425    .data:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

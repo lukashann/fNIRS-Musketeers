@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -16,13 +16,13 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
   13              	@	compiled by GNU C version 5.4.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl ve
   14              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
   15              	@ options passed:  -I . -I include/ -I cfg/
-  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
-  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
-  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
-  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
-  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
-  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
-  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
+  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
+  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
+  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
+  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
+  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
   23              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd
   24              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal
   25              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
   55              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
   56              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
   57              	@ -freg-struct-return -freorder-blocks -freorder-functions
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 2
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s 			page 2
 
 
   58              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
  108 0000 46000000 		.4byte	0x46
  109 0004 0200     		.2byte	0x2
  110 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 3
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s 			page 3
 
 
  111 000a 04       		.byte	0x4
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
  165 0018 3F       		.uleb128 0x3f
  166 0019 0C       		.uleb128 0xc
  167 001a 03       		.uleb128 0x3
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 4
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s 			page 4
 
 
  168 001b 0E       		.uleb128 0xe
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
  219      FB0E0D00 
  219      01010101 
  220              	.LASF0:
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 5
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s 			page 5
 
 
  221 0000 474E5520 		.ascii	"GNU C11 6.2.1 20161205 (release) [ARM/embedded-6-br"
@@ -275,13 +275,13 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 1
  230 00ef 6D61696E 		.ascii	"main\000"
  230      00
  231              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 6.2.1 20161205 (release) [ARM/embedded-6-bran
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s 			page 6
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s:83     .text.startup:0000000000000000 $t
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccW5M9aZ.s:90     .text.startup:0000000000000000 main
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s:83     .text.startup:0000000000000000 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cchjn5oq.s:90     .text.startup:0000000000000000 main
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

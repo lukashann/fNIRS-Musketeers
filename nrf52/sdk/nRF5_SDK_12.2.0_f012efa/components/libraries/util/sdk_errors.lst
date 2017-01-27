@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cc2NqpmH.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -16,13 +16,13 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 1
   13              	@	compiled by GNU C version 5.4.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl ve
   14              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
   15              	@ options passed:  -I . -I include/ -I cfg/
-  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
-  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
-  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
-  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
-  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
-  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
-  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
+  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
+  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
+  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
+  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
+  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
   23              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd
   24              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal
   25              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 1
   55              	@ -fipa-profile -fipa-pure-const -fipa-ra -fipa-reference -fipa-sra
   56              	@ -fira-hoist-pressure -fira-share-save-slots -fira-share-spill-slots
   57              	@ -fisolate-erroneous-paths-dereference -fivopts -fkeep-static-consts
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 2
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cc2NqpmH.s 			page 2
 
 
   58              	@ -fleading-underscore -flifetime-dse -flra-remat -flto-odr-type-merging
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 1
  112 0032 02       		.uleb128 0x2
  113 0033 02       		.byte	0x2
  114 0034 07       		.byte	0x7
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 3
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cc2NqpmH.s 			page 3
 
 
  115 0035 8B000000 		.4byte	.LASF3
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 1
  169 001a 03       		.uleb128 0x3
  170 001b 24       		.uleb128 0x24
  171 001c 00       		.byte	0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 4
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cc2NqpmH.s 			page 4
 
 
  172 001d 0B       		.uleb128 0xb
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 1
  204      7420756E 
  204      7369676E 
  204      65642069 
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 5
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cc2NqpmH.s 			page 5
 
 
  204      6E7400
@@ -294,7 +294,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 1
  221      6720696E 
  221      7400
  222              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 6.2.1 20161205 (release) [ARM/embedded-6-bran
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccxIjV8q.s 			page 6
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//cc2NqpmH.s 			page 6
 
 
 DEFINED SYMBOLS

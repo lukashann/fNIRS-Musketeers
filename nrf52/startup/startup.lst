@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -16,13 +16,13 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
   13              	@	compiled by GNU C version 5.4.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl ve
   14              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
   15              	@ options passed:  -I . -I include/ -I cfg/
-  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
-  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
-  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
-  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
-  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
-  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
-  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  16              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain
+  17              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/arm
+  18              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/gcc
+  19              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/device
+  20              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/toolchain/cmsis/include
+  21              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log
+  22              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/libraries/log/src
   23              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/nrf_soc_nosd
   24              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/hal
   25              	@ -I ../sdk/nRF5_SDK_12.2.0_f012efa/components/drivers_nrf/common
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
   55              	@ -fmove-loop-invariants -fomit-frame-pointer -foptimize-sibling-calls
   56              	@ -fpartial-inlining -fpeephole -fpeephole2 -fplt -fprefetch-loop-arrays
   57              	@ -freg-struct-return -freorder-blocks -freorder-functions
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 2
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 2
 
 
   58              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
   21:../startup/startup.c **** void SPI0_TWI0_IRQHandler(void) __attribute__ ((weak, alias ("default_irq")));
   22:../startup/startup.c **** void SPI1_TWI1_IRQHandler(void) __attribute__ ((weak, alias ("default_irq")));
   23:../startup/startup.c **** void GPIOTE_IRQHandler(void) __attribute__ ((weak, alias ("default_irq")));
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 3
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 3
 
 
   24:../startup/startup.c **** void ADC_IRQHandler(void) __attribute__ ((weak, alias ("default_irq")));
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
   78:../startup/startup.c **** 	SWI2_IRQHandler,       // SWI2 handler
   79:../startup/startup.c **** 	SWI3_IRQHandler,       // SWI3 handler
   80:../startup/startup.c **** 	SWI4_IRQHandler,       // SWI4 handler
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 4
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 4
 
 
   81:../startup/startup.c **** 	SWI5_IRQHandler,       // SWI5 handler
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  119              		.weak	WDT_IRQHandler
  120              		.thumb_set WDT_IRQHandler,default_irq
  121              		.weak	CCM_AAR_IRQHandler
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 5
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 5
 
 
  122              		.thumb_set CCM_AAR_IRQHandler,default_irq
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  175              	.LVL0:
  176 0002 0A4A     		ldr	r2, .L7	@ ivtmp.32,
  177 0004 0A4B     		ldr	r3, .L7+4	@ ivtmp.35,
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 6
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 6
 
 
   93:../startup/startup.c **** 	{
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  224              		.align	2
  225              		.type	g_pfnVectors, %object
  226              		.size	g_pfnVectors, 192
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 7
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 7
 
 
  227              	g_pfnVectors:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  281 0004 0200     		.2byte	0x2
  282 0006 00000000 		.4byte	.Ldebug_abbrev0
  283 000a 04       		.byte	0x4
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 8
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 8
 
 
  284 000b 01       		.uleb128 0x1
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  338 0077 98000000 		.4byte	0x98
  339 007b 86000000 		.4byte	0x86
  340 007f 06       		.uleb128 0x6
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 9
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 9
 
 
  341 0080 8B000000 		.4byte	0x8b
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  395 00e6 04010000 		.4byte	0x104
  396 00ea 0E       		.uleb128 0xe
  397 00eb B5000000 		.4byte	.LASF9
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 10
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 10
 
 
  398 00ef 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  452 0020 3C       		.uleb128 0x3c
  453 0021 0C       		.uleb128 0xc
  454 0022 00       		.byte	0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 11
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 11
 
 
  455 0023 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  509 0059 00       		.byte	0
  510 005a 0B       		.uleb128 0xb
  511 005b 0B       		.uleb128 0xb
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 12
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 12
 
 
  512 005c 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  566 0093 3F       		.uleb128 0x3f
  567 0094 0C       		.uleb128 0xc
  568 0095 03       		.uleb128 0x3
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 13
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 13
 
 
  569 0096 0E       		.uleb128 0xe
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  623 00d0 31       		.uleb128 0x31
  624 00d1 13       		.uleb128 0x13
  625 00d2 00       		.byte	0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 14
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 14
 
 
  626 00d3 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  680 000c 0000     		.2byte	0
  681 000e 0000     		.2byte	0
  682 0010 00000000 		.4byte	.Ltext0
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 15
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 15
 
 
  683 0014 40000000 		.4byte	.Letext0-.Ltext0
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  708              	.LASF8:
  709 00ba 5F656E64 		.ascii	"_end_of_stack\000"
  709      5F6F665F 
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 16
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 16
 
 
  709      73746163 
@@ -938,47 +938,47 @@ ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 1
  723 016d 5F657465 		.ascii	"_etext\000"
  723      787400
  724              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 6.2.1 20161205 (release) [ARM/embedded-6-bran
-ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s 			page 17
+ARM GAS  /var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 startup.c
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:82     .text:0000000000000000 $t
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 default_irq
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SWI5_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SWI4_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SWI3_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SWI2_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SWI1_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SWI0_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 LPCOMP_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 QDEC_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 RTC1_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 WDT_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 CCM_AAR_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 ECB_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 RNG_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 TEMP_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 RTC0_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 TIMER2_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 TIMER1_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 TIMER0_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 ADC_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 GPIOTE_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SPI1_TWI1_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SPI0_TWI0_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 UART0_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 RADIO_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 POWER_CLOCK_IRQHandler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SysTick_Handler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 PendSV_Handler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 SVC_Handler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 HardFault_Handler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:89     .text:0000000000000000 NMI_Handler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:168    .text:0000000000000002 Reset_Handler
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:214    .text:000000000000002c $d
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:227    .isr_vector:0000000000000000 g_pfnVectors
-/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccBqSX42.s:224    .isr_vector:0000000000000000 $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:82     .text:0000000000000000 $t
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 default_irq
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SWI5_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SWI4_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SWI3_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SWI2_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SWI1_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SWI0_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 LPCOMP_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 QDEC_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 RTC1_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 WDT_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 CCM_AAR_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 ECB_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 RNG_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 TEMP_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 RTC0_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 TIMER2_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 TIMER1_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 TIMER0_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 ADC_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 GPIOTE_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SPI1_TWI1_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SPI0_TWI0_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 UART0_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 RADIO_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 POWER_CLOCK_IRQHandler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SysTick_Handler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 PendSV_Handler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 SVC_Handler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 HardFault_Handler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:89     .text:0000000000000000 NMI_Handler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:168    .text:0000000000000002 Reset_Handler
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:214    .text:000000000000002c $d
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:227    .isr_vector:0000000000000000 g_pfnVectors
+/var/folders/nl/q97gxh4d5b321tqt4kfb6yzh0000gn/T//ccYA7FW4.s:224    .isr_vector:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
