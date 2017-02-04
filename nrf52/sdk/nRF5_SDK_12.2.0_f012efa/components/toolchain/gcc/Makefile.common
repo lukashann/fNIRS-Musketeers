@@ -12,6 +12,10 @@ PLATFORM_SUFFIX := $(if $(filter Windows%,$(OS)),windows,posix)
 TOOLCHAIN_CONFIG_FILE := $(TEMPLATE_PATH)/Makefile.$(PLATFORM_SUFFIX)
 include $(TOOLCHAIN_CONFIG_FILE)
 
+
+GNU_INSTALL_ROOT := ../toolchain/arm_cm4
+GNU_PREFIX := arm-none-eabi
+
 # Toolchain commands
 CC      := "$(GNU_INSTALL_ROOT)/bin/$(GNU_PREFIX)-gcc"
 CXX     := "$(GNU_INSTALL_ROOT)/bin/$(GNU_PREFIX)-c++"

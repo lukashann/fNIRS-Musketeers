@@ -13,7 +13,7 @@ SECTIONS
 	.isr_vector : {
 		KEEP(*(.isr_vector)) /* vector table */
 		. = ALIGN(4);
-	} > FLASH
+	} >FLASH
 
 	.text : { /* code and constants */
 		. = ALIGN(4);

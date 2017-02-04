@@ -19,7 +19,7 @@ QUIET=@
 
 # Sources
 # linker script directory
-LDSCRIPT = ../linker_script/nrf52_ld_script.ld
+LDSCRIPT = ../linker_script/nrf52_ld_script.ld  
  
 # startup folder directory     
 STARTUP_DIR = ../startup
@@ -61,13 +61,11 @@ CPFLAGS += -MD -MP -MF .dep\$(@F).d
 
 # Rules
  
-all: $(OBJS) $(PROJECT_NAME).elf  $(PROJECT_NAME).hex $(PROJECT_NAME).map
+all: $(OBJS) $(PROJECT_NAME).elf  $(PROJECT_NAME).bin $(PROJECT_NAME).map
  
 %o: %c
 	$(CC) -c $(CPFLAGS) -I . $(INCLUDE_DIR) $< -o $@
 
-%hex: $(OBJS)
-	$(CC) $(OBJS) $(LDFLAGS) -o $@
 
 %elf: $(OBJS)
 	$(CC) $(OBJS) $(LDFLAGS) -o $@

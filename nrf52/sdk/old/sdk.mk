@@ -1,14 +1,13 @@
-SDK_TOP = ../sdk/nRF5_SDK_12.2.0_f012efa
-SDK_DIRECTORY = $(SDK_TOP)/components
+SDK_DIRECTORY = ../sdk/nRF5_SDK_12.2.0_f012efa/components
  
 # System
-INCLUDES  += $(SDK_DIRECTORY)/toolchain
-INCLUDES  += $(SDK_DIRECTORY)/toolchain/arm
-INCLUDES  += $(SDK_DIRECTORY)/toolchain/gcc
-INCLUDES  += $(SDK_DIRECTORY)/toolchain/cmsis/include
-INCLUDES  += $(SDK_DIRECTORY)/device
-INCLUDES  += $(SDK_DIRECTORY)/libraries/log
-INCLUDES  += $(SDK_DIRECTORY)/libraries/log/src
+CFLAGS  += -I$(SDK_DIRECTORY)/toolchain
+CFLAGS  += -I$(SDK_DIRECTORY)/toolchain/arm
+CFLAGS  += -I$(SDK_DIRECTORY)/toolchain/gcc
+#CFLAGS  += -I$(SDK_DIRECTORY)/device
+CFLAGS  += -I$(SDK_DIRECTORY)/toolchain/cmsis/include
+#CFLAGS  += -I$(SDK_DIRECTORY)/libraries/log
+#CFLAGS  += -I$(SDK_DIRECTORY)/libraries/log/src
  
 SRC       += $(SDK_DIRECTORY)/toolchain/system_nrf52.c
  
